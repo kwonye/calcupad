@@ -1,2 +1,2 @@
-# calcpad
+# CalcPad
 Open-source, ad-free iPad calculator
