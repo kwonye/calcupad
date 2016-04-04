@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE04BCC91CB21E7D008AE096 /* CPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE04BCC81CB21E7D008AE096 /* CPButton.swift */; };
 		BE2AE70F1CACE5E50070BA65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AE70E1CACE5E50070BA65 /* AppDelegate.swift */; };
 		BE2AE7111CACE5E50070BA65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2AE7101CACE5E50070BA65 /* ViewController.swift */; };
 		BE2AE7141CACE5E60070BA65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2AE7121CACE5E60070BA65 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE04BCC81CB21E7D008AE096 /* CPButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPButton.swift; sourceTree = "<group>"; };
 		BE2AE70B1CACE5E50070BA65 /* CalcPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalcPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2AE70E1CACE5E50070BA65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE2AE7101CACE5E50070BA65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				BE2AE71A1CACE5E60070BA65 /* LaunchScreen.storyboard */,
 				BE2AE71D1CACE5E60070BA65 /* Info.plist */,
 				BE2AE7151CACE5E60070BA65 /* CalcPad.xcdatamodeld */,
+				BE04BCC81CB21E7D008AE096 /* CPButton.swift */,
 			);
 			path = CalcPad;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE04BCC91CB21E7D008AE096 /* CPButton.swift in Sources */,
 				BE2AE7171CACE5E60070BA65 /* CalcPad.xcdatamodeld in Sources */,
 				BE2AE7111CACE5E50070BA65 /* ViewController.swift in Sources */,
 				BE2AE70F1CACE5E50070BA65 /* AppDelegate.swift in Sources */,
@@ -488,6 +492,7 @@
 				BE2AE7381CACE5E60070BA65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE2AE7391CACE5E60070BA65 /* Build configuration list for PBXNativeTarget "CalcPadTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				BE2AE73B1CACE5E60070BA65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE2AE73C1CACE5E60070BA65 /* Build configuration list for PBXNativeTarget "CalcPadUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				BE2AE73E1CACE5E60070BA65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
