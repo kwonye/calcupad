@@ -21,16 +21,24 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Fk0-PH-Aee">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="0" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luX-lT-VpG">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXw-uz-UkN">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRp-X1-8ac">
+                                                <rect key="frame" x="8" y="171" width="584" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="k9N-0i-tnX"/>
+                                            <constraint firstItem="WRp-X1-8ac" firstAttribute="leading" secondItem="tXw-uz-UkN" secondAttribute="leading" constant="8" id="BDo-fP-a8T"/>
+                                            <constraint firstAttribute="height" constant="200" id="ge5-VR-Rrf"/>
+                                            <constraint firstAttribute="trailing" secondItem="WRp-X1-8ac" secondAttribute="trailing" constant="8" id="kIX-4m-1We"/>
+                                            <constraint firstAttribute="bottom" secondItem="WRp-X1-8ac" secondAttribute="bottom" constant="8" id="mtV-XZ-nZY"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                    </textView>
+                                    </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6dM-Lc-oxS">
                                         <rect key="frame" x="0.0" y="200" width="600" height="400"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CUE-1T-Ywe">
@@ -53,9 +61,10 @@
                                     </collectionView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="luX-lT-VpG" firstAttribute="leading" secondItem="Fk0-PH-Aee" secondAttribute="leading" id="6hW-yJ-eYv"/>
-                                    <constraint firstAttribute="trailing" secondItem="luX-lT-VpG" secondAttribute="trailing" id="XCW-lK-1e5"/>
-                                    <constraint firstItem="luX-lT-VpG" firstAttribute="top" secondItem="Fk0-PH-Aee" secondAttribute="top" id="nEA-ly-SrL"/>
+                                    <constraint firstItem="tXw-uz-UkN" firstAttribute="top" secondItem="Fk0-PH-Aee" secondAttribute="top" id="2vY-jA-k7x"/>
+                                    <constraint firstItem="tXw-uz-UkN" firstAttribute="leading" secondItem="Fk0-PH-Aee" secondAttribute="leading" id="BQc-6v-QJk"/>
+                                    <constraint firstAttribute="trailing" secondItem="tXw-uz-UkN" secondAttribute="trailing" id="ley-fO-OKJ"/>
+                                    <constraint firstItem="6dM-Lc-oxS" firstAttribute="top" secondItem="tXw-uz-UkN" secondAttribute="bottom" id="yZc-9T-9kE"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -67,9 +76,6 @@
                             <constraint firstItem="Fk0-PH-Aee" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="ts7-wM-qg4"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="resultView" destination="luX-lT-VpG" id="bAo-dN-lv5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
