@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -50,35 +51,50 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssj-7J-ga7" userLabel="Buttons View">
                                         <rect key="frame" x="0.0" y="581" width="528" height="423"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UCv-Hp-v0s">
-                                                <rect key="frame" x="-240" y="-601" width="50" height="50"/>
-                                            </stackView>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cqf-P5-GMe">
-                                                <rect key="frame" x="0.0" y="0.0" width="528" height="143"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWq-rF-0cW">
-                                                <rect key="frame" x="0.0" y="148" width="528" height="128"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdk-Vs-p64">
-                                                <rect key="frame" x="0.0" y="295" width="528" height="128"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G8m-r9-GkM">
+                                                <rect key="frame" x="0.0" y="0.0" width="528" height="423"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="751-GD-0Hm">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Z7q-5u-VHI" customClass="CPButtonCollectionViewCell" customModule="CalcPad" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gek-vk-U3V">
+                                                                    <rect key="frame" x="2" y="2" width="46" height="46"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="gek-vk-U3V" firstAttribute="leading" secondItem="Z7q-5u-VHI" secondAttribute="leadingMargin" constant="-6" id="TKX-6X-dRd"/>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="gek-vk-U3V" secondAttribute="bottom" constant="-6" id="oD6-At-pDB"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="gek-vk-U3V" secondAttribute="trailing" constant="-6" id="qIj-aL-eOC"/>
+                                                            <constraint firstItem="gek-vk-U3V" firstAttribute="top" secondItem="Z7q-5u-VHI" secondAttribute="topMargin" constant="-6" id="wYa-gU-Kn3"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="button" destination="gek-vk-U3V" id="sGo-8G-eWd"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="cdk-Vs-p64" firstAttribute="height" secondItem="Cqf-P5-GMe" secondAttribute="height" id="2OP-jg-FA0"/>
-                                            <constraint firstAttribute="trailing" secondItem="cdk-Vs-p64" secondAttribute="trailing" id="9T5-Ws-5Qx"/>
-                                            <constraint firstItem="HWq-rF-0cW" firstAttribute="height" secondItem="Cqf-P5-GMe" secondAttribute="height" id="FOt-l2-mzl"/>
-                                            <constraint firstItem="Cqf-P5-GMe" firstAttribute="leading" secondItem="ssj-7J-ga7" secondAttribute="leading" id="S9G-aY-MFu"/>
-                                            <constraint firstItem="Cqf-P5-GMe" firstAttribute="top" secondItem="ssj-7J-ga7" secondAttribute="top" id="U2Y-YG-wHK"/>
+                                            <constraint firstAttribute="trailing" secondItem="G8m-r9-GkM" secondAttribute="trailing" id="BQ3-GL-y6P"/>
                                             <constraint firstAttribute="width" secondItem="ssj-7J-ga7" secondAttribute="height" multiplier="5:4" id="WqP-O2-bfv"/>
-                                            <constraint firstAttribute="trailing" secondItem="HWq-rF-0cW" secondAttribute="trailing" id="cWh-kl-4Tz"/>
-                                            <constraint firstItem="HWq-rF-0cW" firstAttribute="leading" secondItem="ssj-7J-ga7" secondAttribute="leading" id="ldt-jv-igO"/>
-                                            <constraint firstAttribute="trailing" secondItem="Cqf-P5-GMe" secondAttribute="trailing" id="oV6-wf-iZb"/>
-                                            <constraint firstAttribute="bottom" secondItem="cdk-Vs-p64" secondAttribute="bottom" id="qWQ-61-cyk"/>
-                                            <constraint firstItem="cdk-Vs-p64" firstAttribute="leading" secondItem="ssj-7J-ga7" secondAttribute="leading" id="uaa-Za-Qz5"/>
+                                            <constraint firstAttribute="bottom" secondItem="G8m-r9-GkM" secondAttribute="bottom" id="eE3-aF-RuJ"/>
+                                            <constraint firstItem="G8m-r9-GkM" firstAttribute="top" secondItem="ssj-7J-ga7" secondAttribute="top" id="gmW-MU-yp6"/>
+                                            <constraint firstItem="G8m-r9-GkM" firstAttribute="leading" secondItem="ssj-7J-ga7" secondAttribute="leading" id="ppF-W8-Cf8"/>
                                         </constraints>
                                     </view>
                                 </subviews>
