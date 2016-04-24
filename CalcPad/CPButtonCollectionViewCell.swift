@@ -13,6 +13,6 @@ class CPButtonCollectionViewCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        button.setTitleColor(UIColor.purpleColor(), forState: UIControlState.Normal)
+//        button.setTitleColor(UIColor.purpleColor(), forState: UIControlState.Normal)
     }
 }

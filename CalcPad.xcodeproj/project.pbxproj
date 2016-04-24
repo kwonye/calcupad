@@ -105,8 +105,8 @@
 			children = (
 				BE2AE70E1CACE5E50070BA65 /* AppDelegate.swift */,
 				BE2AE7101CACE5E50070BA65 /* ViewController.swift */,
-				BE2AE7121CACE5E60070BA65 /* Main.storyboard */,
 				BEBB1FAD1CC89413000E6578 /* CPButtonCollectionViewCell.swift */,
+				BE2AE7121CACE5E60070BA65 /* Main.storyboard */,
 				BE2AE7181CACE5E60070BA65 /* Assets.xcassets */,
 				BE2AE71A1CACE5E60070BA65 /* LaunchScreen.storyboard */,
 				BE2AE71D1CACE5E60070BA65 /* Info.plist */,
