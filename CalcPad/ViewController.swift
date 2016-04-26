@@ -20,7 +20,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     override func viewDidLoad() {
-        buttonsCollectionView.dataSource = self
         
         super.viewDidLoad()
         
