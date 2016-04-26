@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource {
     @IBOutlet weak var buttonsCollectionView: UICollectionView!
     var buttons: [Int]
+    let numberOfSection = 4
     
     required init?(coder aDecoder: NSCoder) {
         buttons = [Int]()
@@ -40,11 +41,11 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 4
+        return numberOfSection
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return buttons.count
+        return buttons.count / numberOfSection
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
