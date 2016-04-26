@@ -39,6 +39,10 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         return .LightContent
     }
     
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 4
+    }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return buttons.count
     }
