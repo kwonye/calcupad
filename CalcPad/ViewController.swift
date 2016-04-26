@@ -58,10 +58,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CPButtonCollectionViewCell", forIndexPath: indexPath) as UICollectionViewCell!
-        cell.backgroundColor = UIColor.blackColor()
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        view.backgroundColor = UIColor.brownColor()
-        cell.selectedBackgroundView = view
         
         return cell
     }
