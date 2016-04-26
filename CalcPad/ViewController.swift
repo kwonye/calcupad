@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var buttonsCollectionView: UICollectionView!
     var buttons: [Int]
-    let numberOfSection = 4
+    let numberOfSections = 4
+    let spacingZero: CGFloat = 0.0
     
     required init?(coder aDecoder: NSCoder) {
         buttons = [Int]()
@@ -48,11 +49,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return numberOfSection
+        return numberOfSections
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return buttons.count / numberOfSection
+        return buttons.count / numberOfSections
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
