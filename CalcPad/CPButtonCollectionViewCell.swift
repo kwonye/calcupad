@@ -9,10 +9,4 @@
 import UIKit
 
 class CPButtonCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var button: UIButton!
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-//        button.setTitleColor(UIColor.purpleColor(), forState: UIControlState.Normal)
-    }
 }
