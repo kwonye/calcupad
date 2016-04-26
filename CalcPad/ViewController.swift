@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var buttonsCollectionView: UICollectionView!
     var buttons: [Int]
     let numberOfSection = 4
@@ -34,6 +34,13 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         buttons.append(8)
         buttons.append(9)
         buttons.append(0)
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return sizeOfCell()
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return spacingZero
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -56,5 +63,10 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         cell.selectedBackgroundView = view
         
         return cell
+    }
+    
+    func sizeOfCell() -> CGSize {
+        let height = buttonsCollectionView.frame.height / numberOfSections
+        return CGSize(width: height, height: height)
     }
 }
