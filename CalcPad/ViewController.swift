@@ -12,7 +12,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var buttonsCollectionView: UICollectionView!
     var buttons: [Int]
     let numberOfSections = 4
-    let spacingZero: CGFloat = 0.0
+    let spacingZero = 0
     
     required init?(coder aDecoder: NSCoder) {
         buttons = [Int]()
@@ -49,7 +49,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return spacingZero
+        return CGFloat(spacingZero)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -71,7 +71,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func sizeOfCell() -> CGSize {
-        let height = buttonsCollectionView.frame.height / numberOfSections
+        let height = buttonsCollectionView.frame.height / CGFloat(numberOfSections)
         return CGSize(width: height, height: height)
     }
 }
