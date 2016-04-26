@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -21,20 +22,25 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CoI-QX-yq1">
                                 <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thV-13-VOV">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="748"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thV-13-VOV">
+                                        <rect key="frame" x="0.0" y="0.0" width="339" height="748"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Sw4-Fo-EOI"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Sw4-Fo-EOI"/>
+                                            </mask>
+                                        </variation>
                                     </tableView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0Ut-hi-I07">
-                                        <rect key="frame" x="200" y="0.0" width="824" height="748"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0Ut-hi-I07">
+                                        <rect key="frame" x="339" y="0.0" width="685" height="748"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VsK-0W-HhZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="824" height="200"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VsK-0W-HhZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="685" height="200"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dW2-Uj-23n">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dW2-Uj-23n">
                                                         <rect key="frame" x="8" y="112" width="808" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="nWr-6i-KNO"/>
@@ -52,27 +58,50 @@
                                                     <constraint firstItem="dW2-Uj-23n" firstAttribute="leading" secondItem="VsK-0W-HhZ" secondAttribute="leading" constant="8" id="rbk-jo-Hgb"/>
                                                 </constraints>
                                             </view>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GoT-Cq-2Z2">
-                                                <rect key="frame" x="0.0" y="200" width="824" height="548"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GoT-Cq-2Z2">
+                                                <rect key="frame" x="0.0" y="200" width="685" height="548"/>
                                                 <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GoT-Cq-2Z2" secondAttribute="height" multiplier="5:4" id="asz-AA-ChX"/>
+                                                </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="srE-Xo-PFz">
-                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="itemSize" width="145" height="124"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CPButtonCollectionViewCell" id="Kqf-jO-RpW" customClass="CPButtonCollectionViewCell" customModule="CalcPad" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                                             <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9P-6x-Rpk">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="E9P-6x-Rpk" secondAttribute="height" multiplier="1:1" id="GIo-cz-QQb"/>
+                                                                    </constraints>
+                                                                    <state key="normal" title="Button"/>
+                                                                </button>
+                                                            </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </view>
                                                         <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="E9P-6x-Rpk" secondAttribute="bottom" constant="-8" id="MzI-0n-Hx4"/>
+                                                            <constraint firstItem="E9P-6x-Rpk" firstAttribute="top" secondItem="Kqf-jO-RpW" secondAttribute="topMargin" constant="-8" id="VNb-nM-pIR"/>
+                                                            <constraint firstItem="E9P-6x-Rpk" firstAttribute="leading" secondItem="Kqf-jO-RpW" secondAttribute="leadingMargin" constant="-8" id="v35-6k-cb6"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="E9P-6x-Rpk" secondAttribute="trailing" constant="-8" id="xut-vv-pfs"/>
+                                                        </constraints>
+                                                        <size key="customSize" width="140" height="140"/>
                                                     </collectionViewCell>
                                                 </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="1OM-nU-KPP"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Fdp-Za-hFP"/>
+                                                </connections>
                                             </collectionView>
                                         </subviews>
                                         <constraints>
