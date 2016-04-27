@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: CalcPad.xcodeproj
+xcode_scheme: CalcPad
+osx_image: xcode7.3
