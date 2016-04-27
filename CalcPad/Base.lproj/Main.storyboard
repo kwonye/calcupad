@@ -96,6 +96,9 @@
                                                             <constraint firstAttribute="trailingMargin" secondItem="E9P-6x-Rpk" secondAttribute="trailing" constant="-8" id="xut-vv-pfs"/>
                                                         </constraints>
                                                         <size key="customSize" width="140" height="140"/>
+                                                        <connections>
+                                                            <outlet property="button" destination="E9P-6x-Rpk" id="OIn-sd-90V"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                                 <connections>
