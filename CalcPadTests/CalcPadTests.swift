@@ -21,4 +21,8 @@ class CalcPadTests: XCTestCase {
         super.tearDown()
     }
     
+    func testExample() {
+        XCTAssert(true)
+    }
+    
 }
