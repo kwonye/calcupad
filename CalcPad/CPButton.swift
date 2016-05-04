@@ -8,9 +8,11 @@
 
 import UIKit
 
-class CPButton: UIButton {
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        layer.borderWidth = 0.25
+class CPButton: NSObject {
+    enum CPButtonType {
+        case Number
+        case Operator
+        case Equals
+        case Modifier
     }
 }
