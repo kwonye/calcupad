@@ -11,37 +11,37 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var buttonsCollectionView: UICollectionView!
-    var buttons: [String]
+    var buttons: [CPButton]
     let numberOfSections = 4
     let numberOfColumns = 5
     let spacingZero = 0
     
     required init?(coder aDecoder: NSCoder) {
-        buttons = [String]()
+        buttons = [CPButton]()
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
-        buttons.append("7")
-        buttons.append("8")
-        buttons.append("9")
-        buttons.append("/")
-        buttons.append("AC")
-        buttons.append("4")
-        buttons.append("5")
-        buttons.append("6")
-        buttons.append("x")
-        buttons.append("+/-")
-        buttons.append("1")
-        buttons.append("2")
-        buttons.append("3")
-        buttons.append("-")
-        buttons.append("%")
-        buttons.append("0")
-        buttons.append("0")
-        buttons.append(".")
-        buttons.append("+")
-        buttons.append("=")
+        buttons.append(CPButton(int: 7))
+        buttons.append(CPButton(int: 8))
+        buttons.append(CPButton(int: 9))
+        buttons.append(CPButton(text: "/"))
+        buttons.append(CPButton(text: "AC"))
+        buttons.append(CPButton(int: 4))
+        buttons.append(CPButton(int: 5))
+        buttons.append(CPButton(int: 6))
+        buttons.append(CPButton(text: "x"))
+        buttons.append(CPButton(text: "+/-"))
+        buttons.append(CPButton(int: 1))
+        buttons.append(CPButton(int: 2))
+        buttons.append(CPButton(int: 3))
+        buttons.append(CPButton(text: "-"))
+        buttons.append(CPButton(text: "%"))
+        buttons.append(CPButton(int: 0))
+        buttons.append(CPButton(int: 0))
+        buttons.append(CPButton(text: "."))
+        buttons.append(CPButton(text: "+"))
+        buttons.append(CPButton(text: "="))
         
         super.viewDidLoad()
     }
