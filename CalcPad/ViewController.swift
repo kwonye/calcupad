@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var buttonsCollectionView: UICollectionView!
     var buttons: [String]
     let numberOfSections = 4
