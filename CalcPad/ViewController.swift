@@ -68,15 +68,41 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CPButtonCollectionViewCell", forIndexPath: indexPath) as! CPButtonCollectionViewCell
-        let sectionAddition = indexPath.section * numberOfColumns
-        let buttonTitle = buttons[indexPath.item + sectionAddition]
-        cell.button.setTitle(buttonTitle, forState: .Normal)
+        cell.data = buttonFrom(indexPath)
+        cell.button.setTitle(cell.data.text, forState: .Normal)
+        cell.button.addTarget(self, action: #selector(buttonPressed(_:)), forControlEvents: .TouchUpInside)
         
         return cell
+    }
+    
+    func buttonPressed(sender: AnyObject) {
+        let button = sender as! UIButton
+        let cpButton = CPButton(text: button.currentTitle!)
+        if shouldAppendToResultLabel(cpButton) {
+            appendText(cpButton.text)
+        }
     }
     
     func sizeOfCell() -> CGSize {
         let height = buttonsCollectionView.frame.height / CGFloat(numberOfSections)
         return CGSize(width: height, height: height)
+    }
+    
+    func buttonFrom(indexPath: NSIndexPath) -> CPButton {
+        let sectionAddition = indexPath.section * numberOfColumns
+        return buttons[indexPath.item + sectionAddition]
+    }
+    
+    func shouldAppendToResultLabel(button: CPButton) -> Bool {
+        let type = button.type
+        return type == .Number || type == .Period
+    }
+    
+    func appendText(text: String) {
+        if resultLabel.text == "0" {
+            resultLabel.text = text
+        } else {
+            resultLabel.text = resultLabel.text?.stringByAppendingString(text)
+        }
     }
 }
