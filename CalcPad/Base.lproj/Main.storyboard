@@ -78,7 +78,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9P-6x-Rpk">
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9P-6x-Rpk" customClass="CPUIButton" customModule="CalcPad" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="E9P-6x-Rpk" secondAttribute="height" multiplier="1:1" id="GIo-cz-QQb"/>

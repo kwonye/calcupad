@@ -9,5 +9,5 @@
 import UIKit
 
 class CPButtonCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var button: CPUIButton!
 }
