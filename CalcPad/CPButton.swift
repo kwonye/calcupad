@@ -47,10 +47,12 @@ public class CPButton: NSObject {
             type = .Equals
         } else if text == period {
             type = .Period
-        }else if modifiers.contains(text) {
+        } else if modifiers.contains(text) {
             type = .Modifier
         } else if clear.contains(text.uppercaseString) {
             type = .Clear
+        } else if operators.contains(text) {
+            type = .Operator
         }
     }
 }
