@@ -15,8 +15,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     let numberOfSections = 4
     let numberOfColumns = 5
     let spacingZero = 0
-    var previousNumber = 0.0
-    var currentModifier: CPButton?
     
     required init?(coder aDecoder: NSCoder) {
         buttons = [CPButton]()
@@ -27,13 +25,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         buttons.append(CPButton(int: 7))
         buttons.append(CPButton(int: 8))
         buttons.append(CPButton(int: 9))
-        buttons.append(CPButton(text: "÷"))
+        buttons.append(CPButton(text: "/"))
         buttons.append(CPButton(text: "AC"))
         buttons.append(CPButton(int: 4))
         buttons.append(CPButton(int: 5))
         buttons.append(CPButton(int: 6))
-        buttons.append(CPButton(text: "×"))
-        buttons.append(CPButton(text: "⁺∕₋"))
+        buttons.append(CPButton(text: "x"))
+        buttons.append(CPButton(text: "+/-"))
         buttons.append(CPButton(int: 1))
         buttons.append(CPButton(int: 2))
         buttons.append(CPButton(int: 3))
@@ -70,27 +68,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CPButtonCollectionViewCell", forIndexPath: indexPath) as! CPButtonCollectionViewCell
-        cell.button.tag = indexPath.item + (indexPath.section * numberOfColumns)
-        let cellButton = buttonFrom(indexPath)
-        cell.button.setTitle(cellButton.text, forState: .Normal)
-        cell.button.addTarget(self, action: #selector(self.buttonPressed(_:)), forControlEvents: .TouchUpInside)
+        cell.data = buttonFrom(indexPath)
+        cell.button.setTitle(cell.data.text, forState: .Normal)
+        cell.button.addTarget(self, action: #selector(buttonPressed(_:)), forControlEvents: .TouchUpInside)
         
         return cell
     }
     
-    func buttonPressed(sender: CPUIButton!) {
-        let cpButton = buttons[sender.tag]
+    func buttonPressed(sender: AnyObject) {
+        let button = sender as! UIButton
+        let cpButton = CPButton(text: button.currentTitle!)
         if shouldAppendToResultLabel(cpButton) {
             appendText(cpButton.text)
-        } else if cpButton.type == .Operator {
-            previousNumber = Double(resultLabel.text!)!
-            currentModifier = cpButton
-        } else if cpButton.type == .Equals {
-            let currentNumber = Double(resultLabel.text!)!
-            if currentModifier != nil {
-                let total = currentNumber + previousNumber
-                resultLabel.text = String(total)
-            }
         }
     }
     
