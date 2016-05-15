@@ -68,9 +68,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CPButtonCollectionViewCell", forIndexPath: indexPath) as! CPButtonCollectionViewCell
-        cell.data = buttonFrom(indexPath)
-        cell.button.setTitle(cell.data.text, forState: .Normal)
-        cell.button.addTarget(self, action: #selector(buttonPressed(_:)), forControlEvents: .TouchUpInside)
         
         return cell
     }
