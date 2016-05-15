@@ -9,38 +9,39 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var buttonsCollectionView: UICollectionView!
-    var buttons: [String]
+    var buttons: [CPButton]
     let numberOfSections = 4
     let numberOfColumns = 5
     let spacingZero = 0
     
     required init?(coder aDecoder: NSCoder) {
-        buttons = [String]()
+        buttons = [CPButton]()
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
-        buttons.append("7")
-        buttons.append("8")
-        buttons.append("9")
-        buttons.append("/")
-        buttons.append("AC")
-        buttons.append("4")
-        buttons.append("5")
-        buttons.append("6")
-        buttons.append("x")
-        buttons.append("+/-")
-        buttons.append("1")
-        buttons.append("2")
-        buttons.append("3")
-        buttons.append("-")
-        buttons.append("%")
-        buttons.append("0")
-        buttons.append("0")
-        buttons.append(".")
-        buttons.append("+")
-        buttons.append("=")
+        buttons.append(CPButton(int: 7))
+        buttons.append(CPButton(int: 8))
+        buttons.append(CPButton(int: 9))
+        buttons.append(CPButton(text: "/"))
+        buttons.append(CPButton(text: "AC"))
+        buttons.append(CPButton(int: 4))
+        buttons.append(CPButton(int: 5))
+        buttons.append(CPButton(int: 6))
+        buttons.append(CPButton(text: "x"))
+        buttons.append(CPButton(text: "+/-"))
+        buttons.append(CPButton(int: 1))
+        buttons.append(CPButton(int: 2))
+        buttons.append(CPButton(int: 3))
+        buttons.append(CPButton(text: "-"))
+        buttons.append(CPButton(text: "%"))
+        buttons.append(CPButton(int: 0))
+        buttons.append(CPButton(int: 0))
+        buttons.append(CPButton(text: "."))
+        buttons.append(CPButton(text: "+"))
+        buttons.append(CPButton(text: "="))
         
         super.viewDidLoad()
     }
@@ -67,15 +68,38 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CPButtonCollectionViewCell", forIndexPath: indexPath) as! CPButtonCollectionViewCell
-        let sectionAddition = indexPath.section * numberOfColumns
-        let buttonTitle = buttons[indexPath.item + sectionAddition]
-        cell.button.setTitle(buttonTitle, forState: .Normal)
         
         return cell
+    }
+    
+    func buttonPressed(sender: AnyObject) {
+        let button = sender as! UIButton
+        let cpButton = CPButton(text: button.currentTitle!)
+        if shouldAppendToResultLabel(cpButton) {
+            appendText(cpButton.text)
+        }
     }
     
     func sizeOfCell() -> CGSize {
         let height = buttonsCollectionView.frame.height / CGFloat(numberOfSections)
         return CGSize(width: height, height: height)
+    }
+    
+    func buttonFrom(indexPath: NSIndexPath) -> CPButton {
+        let sectionAddition = indexPath.section * numberOfColumns
+        return buttons[indexPath.item + sectionAddition]
+    }
+    
+    func shouldAppendToResultLabel(button: CPButton) -> Bool {
+        let type = button.type
+        return type == .Number || type == .Period
+    }
+    
+    func appendText(text: String) {
+        if resultLabel.text == "0" {
+            resultLabel.text = text
+        } else {
+            resultLabel.text = resultLabel.text?.stringByAppendingString(text)
+        }
     }
 }
