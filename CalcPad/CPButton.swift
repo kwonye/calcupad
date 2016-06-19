@@ -16,16 +16,16 @@ public class CPButton: NSObject {
     let clear = ["C", "AC"]
     
     public enum CPButtonType {
-        case Clear
-        case Period
-        case Number
-        case Operator
-        case Equals
-        case Modifier
+        case clear
+        case period
+        case number
+        case `operator`
+        case equals
+        case modifier
     }
     
     var text: String = ""
-    var type: CPButtonType = .Number
+    var type: CPButtonType = .number
     
     override init() {
     }
@@ -42,17 +42,17 @@ public class CPButton: NSObject {
     
     func setType() {
         if Int(text) != nil {
-            type = .Number
+            type = .number
         } else if text == equals {
-            type = .Equals
+            type = .equals
         } else if text == period {
-            type = .Period
+            type = .period
         } else if modifiers.contains(text) {
-            type = .Modifier
-        } else if clear.contains(text.uppercaseString) {
-            type = .Clear
+            type = .modifier
+        } else if clear.contains(text.uppercased()) {
+            type = .clear
         } else if operators.contains(text) {
-            type = .Operator
+            type = .operator
         }
     }
 }

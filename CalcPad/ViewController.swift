@@ -46,33 +46,33 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return sizeOfCell()
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return CGFloat(spacingZero)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+        return .lightContent
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return numberOfSections
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return buttons.count / numberOfSections
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CPButtonCollectionViewCell", forIndexPath: indexPath) as! CPButtonCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CPButtonCollectionViewCell", for: indexPath) as! CPButtonCollectionViewCell
         
         return cell
     }
     
-    func buttonPressed(sender: AnyObject) {
+    func buttonPressed(_ sender: AnyObject) {
         let button = sender as! UIButton
         let cpButton = CPButton(text: button.currentTitle!)
         if shouldAppendToResultLabel(cpButton) {
@@ -85,21 +85,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return CGSize(width: height, height: height)
     }
     
-    func buttonFrom(indexPath: NSIndexPath) -> CPButton {
-        let sectionAddition = indexPath.section * numberOfColumns
-        return buttons[indexPath.item + sectionAddition]
+    func buttonFrom(_ indexPath: IndexPath) -> CPButton {
+        let sectionAddition = (indexPath as NSIndexPath).section * numberOfColumns
+        return buttons[(indexPath as NSIndexPath).item + sectionAddition]
     }
     
-    func shouldAppendToResultLabel(button: CPButton) -> Bool {
+    func shouldAppendToResultLabel(_ button: CPButton) -> Bool {
         let type = button.type
-        return type == .Number || type == .Period
+        return type == .number || type == .period
     }
     
-    func appendText(text: String) {
+    func appendText(_ text: String) {
         if resultLabel.text == "0" {
             resultLabel.text = text
         } else {
-            resultLabel.text = resultLabel.text?.stringByAppendingString(text)
+            resultLabel.text = (resultLabel.text)! + text
         }
     }
 }
