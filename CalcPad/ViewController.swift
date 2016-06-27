@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     @IBAction func onNumberTapped(_ sender: CalculatorButton) {
         var currentText = resultLabel.text!
-        if currentText == "0" && sender.titleLabel!.text! != "." {
+        if currentText == "0" {
             currentText = ""
         }
         
