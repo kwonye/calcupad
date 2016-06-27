@@ -240,7 +240,7 @@
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vOk-bO-BUU"/>
+                                                                            <action selector="onPeriodTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="zjB-XJ-emO"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swa-GK-QA2" customClass="CalculatorButton" customModule="CalcPad" customModuleProvider="target">

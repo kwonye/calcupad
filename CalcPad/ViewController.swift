@@ -32,6 +32,12 @@ class ViewController: UIViewController {
         resultLabel.text = currentText + sender.titleLabel!.text!
     }
     
+    @IBAction func onPeriodTapped() {
+        if let currentText = resultLabel.text where !currentText.contains(".") {
+            resultLabel.text?.append(".")
+        }
+    }
+    
     @IBAction func onBackspaceTapped(_ sender: CalculatorButton) {
         var currentText = resultLabel.text!
         
