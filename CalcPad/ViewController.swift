@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func onClearTapped(_ sender: CalculatorButton) {
+    @IBAction func onClearTapped() {
         resultLabel.text = "0"
     }
 }
