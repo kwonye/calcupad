@@ -22,4 +22,13 @@ class ViewController: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .lightContent
     }
+    
+    @IBAction func onNumberTapped(_ sender: CalculatorButton) {
+        var currentText = resultLabel.text!
+        if currentText == "0" && sender.titleLabel!.text! != "." {
+            currentText = ""
+        }
+        
+        resultLabel.text = currentText + sender.titleLabel!.text!
+    }
 }

@@ -66,6 +66,9 @@
                                                                         <state key="normal" title="7">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k0r-fv-u1X"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIi-0P-Amo" customClass="CalculatorButton" customModule="CalcPad" customModuleProvider="target">
                                                                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
@@ -73,6 +76,9 @@
                                                                         <state key="normal" title="8">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VxA-gW-fF7"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3um-1S-lbm" customClass="CalculatorButton" customModule="CalcPad" customModuleProvider="target">
                                                                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,6 +86,9 @@
                                                                         <state key="normal" title="9">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tB3-1s-wVv"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="But-pc-zM2" customClass="CalculatorButton" customModule="CalcPad" customModuleProvider="target">
                                                                         <color key="backgroundColor" red="0.96470588235294119" green="0.57647058823529407" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
@@ -105,6 +114,9 @@
                                                                         <state key="normal" title="4">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0i-9Z-2Fb"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzO-0L-wEe" customClass="CalculatorButton" customModule="CalcPad" customModuleProvider="target">
                                                                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
@@ -112,6 +124,9 @@
                                                                         <state key="normal" title="5">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tfA-Z2-iUl"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bc5-Kg-REc" customClass="CalculatorButton" customModule="CalcPad" customModuleProvider="target">
                                                                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
@@ -119,6 +134,9 @@
                                                                         <state key="normal" title="6">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R0s-EJ-6iH"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2h-1D-BGP" customClass="CalculatorButton" customModule="CalcPad" customModuleProvider="target">
                                                                         <color key="backgroundColor" red="0.96470588235294119" green="0.57647058823529407" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
@@ -144,6 +162,9 @@
                                                                         <state key="normal" title="1">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vtR-3g-V76"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0u-xQ-9Eg" customClass="CalculatorButton" customModule="CalcPad" customModuleProvider="target">
                                                                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
@@ -151,6 +172,9 @@
                                                                         <state key="normal" title="2">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jb7-RY-eyS"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDw-tn-tIP" customClass="CalculatorButton" customModule="CalcPad" customModuleProvider="target">
                                                                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
@@ -158,6 +182,9 @@
                                                                         <state key="normal" title="3">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9pZ-pl-NtP"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxd-bd-usp" customClass="CalculatorButton" customModule="CalcPad" customModuleProvider="target">
                                                                         <color key="backgroundColor" red="0.96470588235294119" green="0.57647058823529407" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
@@ -190,6 +217,9 @@
                                                                         <state key="normal" title="0">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x2x-z2-aSV"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRf-6j-FvN" customClass="CalculatorButton" customModule="CalcPad" customModuleProvider="target">
                                                                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
@@ -197,6 +227,9 @@
                                                                         <state key="normal" title=".">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vOk-bO-BUU"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swa-GK-QA2" customClass="CalculatorButton" customModule="CalcPad" customModuleProvider="target">
                                                                         <color key="backgroundColor" red="0.96470588235294119" green="0.57647058823529407" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
