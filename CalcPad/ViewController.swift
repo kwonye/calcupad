@@ -61,7 +61,6 @@ class ViewController: UIViewController {
             } else {
                 resultLabel.text = "-" + currentText
             }
-            
         }
     }
     
