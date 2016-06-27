@@ -44,4 +44,8 @@ class ViewController: UIViewController {
             resultLabel.text = currentText
         }
     }
+    
+    @IBAction func onClearTapped(_ sender: CalculatorButton) {
+        resultLabel.text = "0"
+    }
 }
