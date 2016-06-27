@@ -103,6 +103,9 @@
                                                                         <state key="normal" title="AC">
                                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="onAllClearTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="VE7-9N-8ss"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>

@@ -48,4 +48,9 @@ class ViewController: UIViewController {
     @IBAction func onClearTapped() {
         resultLabel.text = "0"
     }
+    
+    @IBAction func onAllClearTapped() {
+        onClearTapped()
+        // Clear all preferences
+    }
 }
