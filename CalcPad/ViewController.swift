@@ -9,9 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var previousValue: Double?
     @IBOutlet weak var resultLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
+        previousValue = 0
         super.init(coder: aDecoder)
     }
     
@@ -25,7 +27,7 @@ class ViewController: UIViewController {
     
     @IBAction func onNumberTapped(_ sender: CalculatorButton) {
         var currentText = resultLabel.text!
-        if currentText == "0" {
+        if currentText == "0" || previousValue != nil {
             currentText = ""
         }
         
@@ -62,6 +64,12 @@ class ViewController: UIViewController {
                 resultLabel.text = "-" + currentText
             }
         }
+    }
+    
+    @IBAction func onOperationTapped(_ sender: CalculatorButton) {
+        previousValue = Double(resultLabel.text!)!
+        currentValue = nil
+        sender.isHighlighted = true
     }
     
     @IBAction func onClearTapped() {
