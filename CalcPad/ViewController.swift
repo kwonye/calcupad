@@ -31,4 +31,17 @@ class ViewController: UIViewController {
         
         resultLabel.text = currentText + sender.titleLabel!.text!
     }
+    
+    @IBAction func onBackspaceTapped(_ sender: CalculatorButton) {
+        var currentText = resultLabel.text!
+        
+        if currentText.characters.count == 1 {
+            if currentText != "0" {
+                resultLabel.text = "0"
+            }
+        } else {
+            currentText.remove(at: currentText.index(before: currentText.endIndex))
+            resultLabel.text = currentText
+        }
+    }
 }
