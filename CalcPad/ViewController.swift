@@ -45,6 +45,20 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func onNegativeTapped() {
+        if var currentText = resultLabel.text where currentText != "0" {
+            let firstCharacter = currentText[currentText.startIndex]
+            
+            if firstCharacter == "-" {
+                currentText.remove(at: currentText.startIndex)
+                resultLabel.text = currentText
+            } else {
+                resultLabel.text = "-" + currentText
+            }
+            
+        }
+    }
+    
     @IBAction func onClearTapped() {
         resultLabel.text = "0"
     }
