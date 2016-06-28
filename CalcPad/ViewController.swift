@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var previousValue: Double?
+    var currentValue: Double?
     @IBOutlet weak var resultLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
@@ -79,5 +80,18 @@ class ViewController: UIViewController {
     @IBAction func onAllClearTapped() {
         onClearTapped()
         // Clear all preferences
+    @IBAction func onEqualsTapped() {
+        if let firstValue = previousValue, secondValue = currentValue {
+            let solution = firstValue + secondValue
+            
+            if solution.truncatingRemainder(dividingBy: 1) == 0 {
+                resultLabel.text = String(Int(solution))
+            } else {
+                resultLabel.text = String(solution)
+            }
+            
+            previousValue = solution
+            currentValue = nil
+        }
     }
 }
