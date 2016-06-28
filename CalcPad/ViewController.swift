@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     let multiply = "×"
     let divide = "÷"
     
-    var previousValue: Double?
+    var previousValue: Double
     var currentValue: Double?
     var currentOperator: String?
     @IBOutlet weak var resultLabel: UILabel!
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         let inputText = sender.titleLabel!.text!
         var currentText = resultLabel.text!
         
-        if currentText == zero || (previousValue != nil && currentValue == nil) {
+        if currentText == zero || currentValue == nil {
             currentText = inputText
         } else {
             currentText = currentText + inputText
@@ -49,14 +49,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onPeriodTapped() {
-        if let currentText = resultLabel.text where !currentText.contains(period) {
-            if previousValue != nil && currentValue == nil {
-                resultLabel.text = zero + period
-            } else {
-                resultLabel.text?.append(period)
-            }
-            currentValue = Double(currentText)
+        guard let currentText = resultLabel.text where !currentText.contains(period) else {
+            return
         }
+        
+        if currentValue == nil {
+            resultLabel.text = zero + period
+        } else {
+            resultLabel.text?.append(period)
+        }
+        currentValue = Double(currentText)
     }
     
     @IBAction func onBackspaceTapped(_ sender: CalculatorButton) {
@@ -73,13 +75,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onNegativeTapped() {
-        if var currentText = resultLabel.text where currentText != zero {
-            if currentText.contains(minus) {
-                currentText.remove(at: currentText.startIndex)
-                resultLabel.text = currentText
-            } else {
-                resultLabel.text = minus + currentText
-            }
+        guard var currentText = resultLabel.text where currentText != zero else {
+            return
+        }
+        
+        if currentText.contains(minus) {
+            currentText.remove(at: currentText.startIndex)
+            resultLabel.text = currentText
+        } else {
+            resultLabel.text = minus + currentText
         }
     }
     
@@ -116,19 +120,19 @@ class ViewController: UIViewController {
     }
     
     func solveEquation() -> Double? {
-        guard let firstValue = previousValue, secondValue = currentValue, solutionOperator = currentOperator else {
+        guard let secondValue = currentValue, solutionOperator = currentOperator else {
             return nil
         }
         
         switch solutionOperator {
         case plus:
-            return firstValue + secondValue
+            return previousValue + secondValue
         case minus:
-            return firstValue - secondValue
+            return previousValue - secondValue
         case multiply:
-            return firstValue * secondValue
+            return previousValue * secondValue
         case divide:
-            return firstValue / secondValue
+            return previousValue / secondValue
         default:
             return nil
         }
