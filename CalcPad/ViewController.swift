@@ -27,17 +27,27 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onNumberTapped(_ sender: CalculatorButton) {
+        let inputText = sender.titleLabel!.text!
         var currentText = resultLabel.text!
-        if currentText == "0" || previousValue != nil {
-            currentText = ""
+        
+        if currentText == "0" || (previousValue != nil && currentValue == nil) {
+            currentText = inputText
+        } else {
+            currentText = currentText + inputText
         }
         
-        resultLabel.text = currentText + sender.titleLabel!.text!
+        currentValue = Double(currentText)
+        resultLabel.text = currentText
     }
     
     @IBAction func onPeriodTapped() {
         if let currentText = resultLabel.text where !currentText.contains(".") {
-            resultLabel.text?.append(".")
+            if previousValue != nil && currentValue == nil {
+                resultLabel.text = "0."
+            } else {
+                resultLabel.text?.append(".")
+            }
+            currentValue = Double(currentText)
         }
     }
     
@@ -75,11 +85,14 @@ class ViewController: UIViewController {
     
     @IBAction func onClearTapped() {
         resultLabel.text = "0"
+        currentValue = nil
     }
     
     @IBAction func onAllClearTapped() {
         onClearTapped()
-        // Clear all preferences
+        previousValue = 0
+    }
+    
     @IBAction func onEqualsTapped() {
         if let firstValue = previousValue, secondValue = currentValue {
             let solution = firstValue + secondValue
