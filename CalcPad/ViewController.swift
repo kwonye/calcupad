@@ -8,98 +8,133 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController {
+    let zero = "0"
+    let period = "."
+    let plus = "+"
+    let minus = "−"
+    let multiply = "×"
+    let divide = "÷"
+    
+    var previousValue: Double
+    var currentValue: Double?
+    var currentOperator: String?
     @IBOutlet weak var resultLabel: UILabel!
-    @IBOutlet weak var buttonsCollectionView: UICollectionView!
-    var buttons: [CPButton]
-    let numberOfSections = 4
-    let numberOfColumns = 5
-    let spacingZero = 0
     
     required init?(coder aDecoder: NSCoder) {
-        buttons = [CPButton]()
+        previousValue = 0
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
-        buttons.append(CPButton(int: 7))
-        buttons.append(CPButton(int: 8))
-        buttons.append(CPButton(int: 9))
-        buttons.append(CPButton(text: "/"))
-        buttons.append(CPButton(text: "AC"))
-        buttons.append(CPButton(int: 4))
-        buttons.append(CPButton(int: 5))
-        buttons.append(CPButton(int: 6))
-        buttons.append(CPButton(text: "x"))
-        buttons.append(CPButton(text: "+/-"))
-        buttons.append(CPButton(int: 1))
-        buttons.append(CPButton(int: 2))
-        buttons.append(CPButton(int: 3))
-        buttons.append(CPButton(text: "-"))
-        buttons.append(CPButton(text: "%"))
-        buttons.append(CPButton(int: 0))
-        buttons.append(CPButton(int: 0))
-        buttons.append(CPButton(text: "."))
-        buttons.append(CPButton(text: "+"))
-        buttons.append(CPButton(text: "="))
-        
         super.viewDidLoad()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return sizeOfCell()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(spacingZero)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .lightContent
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return numberOfSections
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return buttons.count / numberOfSections
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CPButtonCollectionViewCell", for: indexPath) as! CPButtonCollectionViewCell
+    @IBAction func onNumberTapped(_ sender: CalculatorButton) {
+        let inputText = sender.titleLabel!.text!
+        var currentText = resultLabel.text!
         
-        return cell
+        if currentText == zero || currentValue == nil {
+            currentText = inputText
+        } else {
+            currentText = currentText + inputText
+        }
+        
+        currentValue = Double(currentText)
+        resultLabel.text = currentText
     }
     
-    func buttonPressed(_ sender: AnyObject) {
-        let button = sender as! UIButton
-        let cpButton = CPButton(text: button.currentTitle!)
-        if shouldAppendToResultLabel(cpButton) {
-            appendText(cpButton.text)
+    @IBAction func onPeriodTapped() {
+        guard let currentText = resultLabel.text where !currentText.contains(period) else {
+            return
+        }
+        
+        if currentValue == nil {
+            resultLabel.text = zero + period
+        } else {
+            resultLabel.text?.append(period)
+        }
+        currentValue = Double(currentText)
+    }
+    
+    @IBAction func onBackspaceTapped(_ sender: CalculatorButton) {
+        var currentText = resultLabel.text!
+        
+        if currentText.characters.count == 1 {
+            if currentText != zero {
+                resultLabel.text = zero
+            }
+        } else {
+            currentText.remove(at: currentText.index(before: currentText.endIndex))
+            resultLabel.text = currentText
         }
     }
     
-    func sizeOfCell() -> CGSize {
-        let height = buttonsCollectionView.frame.height / CGFloat(numberOfSections)
-        return CGSize(width: height, height: height)
-    }
-    
-    func buttonFrom(_ indexPath: IndexPath) -> CPButton {
-        let sectionAddition = (indexPath as NSIndexPath).section * numberOfColumns
-        return buttons[(indexPath as NSIndexPath).item + sectionAddition]
-    }
-    
-    func shouldAppendToResultLabel(_ button: CPButton) -> Bool {
-        let type = button.type
-        return type == .number || type == .period
-    }
-    
-    func appendText(_ text: String) {
-        if resultLabel.text == "0" {
-            resultLabel.text = text
+    @IBAction func onNegativeTapped() {
+        guard var currentText = resultLabel.text where currentText != zero else {
+            return
+        }
+        
+        if currentText.contains(minus) {
+            currentText.remove(at: currentText.startIndex)
+            resultLabel.text = currentText
         } else {
-            resultLabel.text = (resultLabel.text)! + text
+            resultLabel.text = minus + currentText
+        }
+    }
+    
+    @IBAction func onOperationTapped(_ sender: CalculatorButton) {
+        currentOperator = sender.titleLabel!.text!
+        previousValue = Double(resultLabel.text!)!
+        currentValue = nil
+        sender.isHighlighted = true
+    }
+    
+    @IBAction func onClearTapped() {
+        resultLabel.text = zero
+        currentValue = nil
+    }
+    
+    @IBAction func onAllClearTapped() {
+        onClearTapped()
+        previousValue = 0
+    }
+    
+    @IBAction func onEqualsTapped() {
+        guard let solution = solveEquation() else {
+            return
+        }
+        
+        if solution.truncatingRemainder(dividingBy: 1) == 0 {
+            resultLabel.text = String(Int(solution))
+        } else {
+            resultLabel.text = String(solution)
+        }
+        
+        previousValue = solution
+        currentValue = nil
+    }
+    
+    func solveEquation() -> Double? {
+        guard let secondValue = currentValue, solutionOperator = currentOperator else {
+            return nil
+        }
+        
+        switch solutionOperator {
+        case plus:
+            return previousValue + secondValue
+        case minus:
+            return previousValue - secondValue
+        case multiply:
+            return previousValue * secondValue
+        case divide:
+            return previousValue / secondValue
+        default:
+            return nil
         }
     }
 }
