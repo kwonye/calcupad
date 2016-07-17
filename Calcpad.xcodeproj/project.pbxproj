@@ -15,6 +15,7 @@
 		BE063E9D1D3BF17900DBAD78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE063E9B1D3BF17900DBAD78 /* LaunchScreen.storyboard */; };
 		BE063EA81D3BF17900DBAD78 /* CalcpadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE063EA71D3BF17900DBAD78 /* CalcpadTests.swift */; };
 		BE063EB31D3BF17900DBAD78 /* CalcpadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE063EB21D3BF17900DBAD78 /* CalcpadUITests.swift */; };
+		BECFA1B31D3C33EB0072A9E3 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECFA1B21D3C33EB0072A9E3 /* CalculatorButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BE063EAE1D3BF17900DBAD78 /* CalcpadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcpadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE063EB21D3BF17900DBAD78 /* CalcpadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcpadUITests.swift; sourceTree = "<group>"; };
 		BE063EB41D3BF17900DBAD78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECFA1B21D3C33EB0072A9E3 /* CalculatorButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				BE063E8F1D3BF17900DBAD78 /* AppDelegate.swift */,
 				BE063E911D3BF17900DBAD78 /* ViewController.swift */,
+				BECFA1B21D3C33EB0072A9E3 /* CalculatorButton.swift */,
 				BE063E931D3BF17900DBAD78 /* Main.storyboard */,
 				BE063E991D3BF17900DBAD78 /* Assets.xcassets */,
 				BE063E9B1D3BF17900DBAD78 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 				BE063E921D3BF17900DBAD78 /* ViewController.swift in Sources */,
 				BE063E901D3BF17900DBAD78 /* AppDelegate.swift in Sources */,
 				BE063E981D3BF17900DBAD78 /* Calcpad.xcdatamodeld in Sources */,
+				BECFA1B31D3C33EB0072A9E3 /* CalculatorButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +492,7 @@
 				BE063EB91D3BF17900DBAD78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE063EBA1D3BF17900DBAD78 /* Build configuration list for PBXNativeTarget "CalcpadTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				BE063EBC1D3BF17900DBAD78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE063EBD1D3BF17900DBAD78 /* Build configuration list for PBXNativeTarget "CalcpadUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				BE063EBF1D3BF17900DBAD78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
