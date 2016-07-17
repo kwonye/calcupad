@@ -38,6 +38,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="sgv-7l-IhC"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Iyt-AU-Pnf"/>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svN-Pz-xcQ">
