@@ -42,7 +42,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVG-fN-jVW">
                                                         <rect key="frame" x="0.0" y="389.5" width="184" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -62,6 +62,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7O-kz-Nyt" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="7"/>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAi-kY-D2i"/>
@@ -69,6 +70,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-Cf-AXP" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="8"/>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MeM-bJ-8wZ"/>
@@ -76,6 +78,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldT-fv-fgT" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="80" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="9"/>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h28-Zj-hqb"/>
@@ -83,6 +86,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amr-qI-s9M" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="÷"/>
                                                                 <connections>
                                                                     <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWj-wV-VPd"/>
@@ -90,6 +94,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOJ-9I-VLY" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="160" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="AC"/>
                                                                 <connections>
                                                                     <action selector="onAllClearTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbF-0T-JGB"/>
@@ -102,6 +107,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cz-nO-djj" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="4"/>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mhl-lR-lvG"/>
@@ -109,6 +115,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD2-EE-WWU" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="5"/>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5d-fo-fFw"/>
@@ -116,6 +123,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbw-hx-ABD" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="80" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="6"/>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZi-PS-jxh"/>
@@ -123,6 +131,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXa-ZO-IgT" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="×"/>
                                                                 <connections>
                                                                     <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSI-wb-I4A"/>
@@ -130,6 +139,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lI-D9-eJm" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="160" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="C"/>
                                                                 <connections>
                                                                     <action selector="onClearTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZs-Zy-e7t"/>
@@ -142,6 +152,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYh-g4-q5V" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="1"/>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J6k-an-Q0l"/>
@@ -149,6 +160,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKi-da-Uha" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="2"/>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bie-G4-djs"/>
@@ -156,6 +168,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yy-RK-8VX" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="80" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="3"/>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iVi-TN-lMg"/>
@@ -163,6 +176,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i26-b2-ttv" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="-"/>
                                                                 <connections>
                                                                     <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fb9-CB-ikq"/>
@@ -170,6 +184,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAH-xj-Gbf" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="160" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="←"/>
                                                                 <connections>
                                                                     <action selector="onBackspaceTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKg-pp-JSC"/>
@@ -182,6 +197,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5go-FI-mrL" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="±"/>
                                                                 <connections>
                                                                     <action selector="onNegativeTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="vyd-3T-u44"/>
@@ -189,6 +205,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="681-z3-HQV" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="0"/>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycu-ku-Q5b"/>
@@ -196,6 +213,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdG-cW-J5h" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="80" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="."/>
                                                                 <connections>
                                                                     <action selector="onPeriodTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZM9-P9-39O"/>
@@ -203,6 +221,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPq-5V-cId" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="+"/>
                                                                 <connections>
                                                                     <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Wa-U1-fw8"/>
@@ -210,6 +229,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1al-Eo-BoX" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="160" y="0.0" width="40" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                                 <state key="normal" title="="/>
                                                                 <connections>
                                                                     <action selector="onEqualsTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="UTK-5b-ok4"/>
