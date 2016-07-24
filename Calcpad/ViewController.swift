@@ -128,11 +128,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             return
         }
         
-        if solution % 1 == 0 {
-            resultLabel.text = String(Int(solution))
-        } else {
-            resultLabel.text = String(solution)
-        }
+        resultLabel.text = readableString(solution)
         
         saveToCoreData()
         
@@ -159,6 +155,16 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         tableView.reloadData()
     }
+    
+    func readableString(value: Double?) -> String {
+        if value! % 1 == 0 {
+            return String(Int(value!))
+        } else {
+            return String(value!)
+        }
+    }
+
+    
     func solveEquation() -> Double? {
         guard let secondValue = currentValue, solutionOperator = currentOperator else {
             return nil
