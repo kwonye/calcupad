@@ -173,7 +173,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
     }
 
-    
     func solveEquation() -> Double? {
         guard let secondValue = currentValue, solutionOperator = currentOperator else {
             return nil
