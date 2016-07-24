@@ -260,7 +260,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GEm-Qb-dhP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Iuv-Gw-VSM"/>
                             <constraint firstItem="svN-Pz-xcQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MHr-fK-LBB"/>
