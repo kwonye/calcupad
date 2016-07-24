@@ -65,7 +65,7 @@
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="7">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAi-kY-D2i"/>
@@ -76,7 +76,7 @@
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="8">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MeM-bJ-8wZ"/>
@@ -87,7 +87,7 @@
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="9">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h28-Zj-hqb"/>
@@ -106,7 +106,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOJ-9I-VLY" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="160" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="AC">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -125,7 +125,7 @@
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="4">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mhl-lR-lvG"/>
@@ -136,7 +136,7 @@
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="5">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5d-fo-fFw"/>
@@ -147,7 +147,7 @@
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="6">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZi-PS-jxh"/>
@@ -166,7 +166,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lI-D9-eJm" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="160" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="C">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -185,7 +185,7 @@
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="1">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J6k-an-Q0l"/>
@@ -196,7 +196,7 @@
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="2">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bie-G4-djs"/>
@@ -207,7 +207,7 @@
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="3">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iVi-TN-lMg"/>
@@ -226,7 +226,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAH-xj-Gbf" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="160" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="←">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -245,7 +245,7 @@
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="±">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onNegativeTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="vyd-3T-u44"/>
@@ -256,7 +256,7 @@
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="0">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycu-ku-Q5b"/>
@@ -267,7 +267,7 @@
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title=".">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="onPeriodTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZM9-P9-39O"/>
