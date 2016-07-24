@@ -130,10 +130,15 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         resultLabel.text = readableString(solution)
         
-        saveToCoreData()
+        if resultLabel.text == NSLocalizedString("Number too large", comment: "Number being too large") {
+            previousValue = 0
+            currentValue = nil
+        } else {
+            saveToCoreData()
         
-        previousValue = solution
-        currentValue = nil
+            previousValue = solution
+            currentValue = nil
+        }
     }
     
     func saveToCoreData() {
@@ -157,6 +162,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func readableString(value: Double?) -> String {
+        if value > Double(Int.max) {
+            return NSLocalizedString("Number too large", comment: "Number being too large")
+        }
+        
         if value! % 1 == 0 {
             return String(Int(value!))
         } else {
