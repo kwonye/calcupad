@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     let zero = "0"
     let period = "."
@@ -18,6 +20,7 @@ class ViewController: UIViewController {
     let multiply = "×"
     let divide = "÷"
     
+    var results = [NSManagedObject]()
     var previousValue: Double
     var currentValue: Double?
     var currentOperator: String?
@@ -27,8 +30,28 @@ class ViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.reloadData()
+    }
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return results.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        
+        let result = results[indexPath.row]
+        
+        cell!.textLabel!.text = result.valueForKey("equation") as? String
+        
+        return cell!
     }
 
     @IBAction func onNumberTapped(sender: CalculatorButton) {
@@ -111,10 +134,31 @@ class ViewController: UIViewController {
             resultLabel.text = String(solution)
         }
         
+        saveToCoreData()
+        
         previousValue = solution
         currentValue = nil
     }
     
+    func saveToCoreData() {
+        let equation = "\(readableString(previousValue)) \(currentOperator!) \(readableString(currentValue)) = \(resultLabel.text!)"
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let entity = NSEntityDescription.entityForName("Calculation", inManagedObjectContext: managedContext)
+        
+        let result = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        result.setValue(equation, forKey: "equation")
+        
+        do {
+            try managedContext.save()
+            results.append(result)
+        } catch let error as NSError {
+            print("Couldn't save object because of error: \(error)")
+        }
+        
+        tableView.reloadData()
+    }
     func solveEquation() -> Double? {
         guard let secondValue = currentValue, solutionOperator = currentOperator else {
             return nil
