@@ -60,7 +60,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MzY-Jc-TZD">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7O-kz-Nyt" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7O-kz-Nyt" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
@@ -333,6 +333,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="divideButton" destination="Amr-qI-s9M" id="9ij-Xm-nBa"/>
+                        <outlet property="minusButton" destination="i26-b2-ttv" id="3He-pj-aZZ"/>
+                        <outlet property="multiplyButton" destination="eXa-ZO-IgT" id="oi7-ah-bXm"/>
+                        <outlet property="plusButton" destination="oPq-5V-cId" id="APt-DX-9pm"/>
                         <outlet property="resultLabel" destination="qVG-fN-jVW" id="UsX-hD-q26"/>
                         <outlet property="tableView" destination="GEm-Qb-dhP" id="hK9-qh-Z60"/>
                     </connections>

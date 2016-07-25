@@ -10,6 +10,10 @@ import UIKit
 import CoreData
 
 class ViewController: UIViewController, UITableViewDataSource {
+    @IBOutlet weak var divideButton: CalculatorButton!
+    @IBOutlet weak var multiplyButton: CalculatorButton!
+    @IBOutlet weak var minusButton: CalculatorButton!
+    @IBOutlet weak var plusButton: CalculatorButton!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
@@ -109,6 +113,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBAction func onOperationTapped(sender: CalculatorButton) {
         currentOperator = sender.titleLabel!.text!
+        highlightOperationButton()
         previousValue = Double(resultLabel.text!)!
         currentValue = nil
     }
@@ -159,6 +164,14 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         
         tableView.reloadData()
+    }
+    
+    func highlightOperationButton() {
+        let operationButtons = [divideButton, multiplyButton, minusButton, plusButton];
+        
+        for button in operationButtons {
+            button.toggleHighlighted(button.titleLabel!.text == currentOperator)
+        }
     }
     
     func readableString(value: Double?) -> String {
