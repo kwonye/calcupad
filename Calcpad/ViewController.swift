@@ -138,13 +138,14 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         if resultLabel.text == NSLocalizedString("Number too large", comment: "Number being too large") {
             previousValue = 0
-            currentValue = nil
         } else {
             saveToCoreData()
-        
             previousValue = solution
-            currentValue = nil
         }
+        
+        currentValue = nil
+        currentOperator = nil
+        highlightOperationButton()
     }
     
     func saveToCoreData() {
