@@ -125,6 +125,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBAction func onAllClearTapped() {
         onClearTapped()
         previousValue = 0
+        currentOperator = nil
+        highlightOperationButton()
     }
     
     @IBAction func onEqualsTapped() {
