@@ -25,13 +25,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     let divide = "÷"
     
     var results = [NSManagedObject]()
-    var previousValue: Double
+    var previousValue: Double?
     var currentValue: Double?
     var currentOperator: String?
     var operationButtons: [CalculatorButton]?
     
     required init?(coder aDecoder: NSCoder) {
-        previousValue = 0
+        previousValue = nil
         super.init(coder: aDecoder)
     }
     
@@ -113,6 +113,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func onOperationTapped(sender: CalculatorButton) {
+        if previousValue != nil {
+            previousValue = Double(resultLabel.text!)!
+            onEqualsTapped()
+        }
         currentOperator = sender.titleLabel!.text!
         highlightOperationButton()
         previousValue = Double(resultLabel.text!)!
@@ -126,7 +130,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBAction func onAllClearTapped() {
         onClearTapped()
-        previousValue = 0
+        previousValue = nil
         currentOperator = nil
         highlightOperationButton()
     }
@@ -139,7 +143,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         resultLabel.text = readableString(solution)
         
         if resultLabel.text == NSLocalizedString("Number too large", comment: "Number being too large") {
-            previousValue = 0
+            previousValue = nil
         } else {
             saveToCoreData()
             previousValue = solution
@@ -193,15 +197,19 @@ class ViewController: UIViewController, UITableViewDataSource {
             return nil
         }
         
+        guard let firstValue = previousValue else {
+            return nil
+        }
+        
         switch solutionOperator {
         case plus:
-            return previousValue + secondValue
+            return firstValue + secondValue
         case minus:
-            return previousValue - secondValue
+            return firstValue - secondValue
         case multiply:
-            return previousValue * secondValue
+            return firstValue * secondValue
         case divide:
-            return previousValue / secondValue
+            return firstValue / secondValue
         default:
             return nil
         }
