@@ -28,6 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     var previousValue: Double
     var currentValue: Double?
     var currentOperator: String?
+    var operationButtons: [CalculatorButton]?
     
     required init?(coder aDecoder: NSCoder) {
         previousValue = 0
@@ -36,6 +37,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        operationButtons = [divideButton, multiplyButton, minusButton, plusButton];
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.reloadData()
     }
@@ -169,9 +171,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func highlightOperationButton() {
-        let operationButtons = [divideButton, multiplyButton, minusButton, plusButton];
-        
-        for button in operationButtons {
+        for button in operationButtons! {
             button.toggleHighlighted(button.titleLabel!.text == currentOperator)
         }
     }
