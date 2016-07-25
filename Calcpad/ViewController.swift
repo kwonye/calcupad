@@ -86,15 +86,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func onBackspaceTapped() {
-        var currentText = resultLabel.text!
+        let currentText = resultLabel.text!
         
         if currentText.characters.count == 1 {
             if currentText != zero {
                 resultLabel.text = zero
             }
         } else {
-            currentText.removeAtIndex(currentText.endIndex)
-            resultLabel.text = currentText
+            resultLabel.text = currentText.substringToIndex(currentText.endIndex.predecessor())
         }
     }
     
