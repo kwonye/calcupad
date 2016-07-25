@@ -14,4 +14,12 @@ class CalculatorButton: UIButton {
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.blackColor().CGColor
     }
+    
+    func toggleHighlighted(isHighlighted: Bool) {
+        if isHighlighted {
+            layer.borderWidth = 3
+        } else {
+            layer.borderWidth = 0.5
+        }
+    }
 }
