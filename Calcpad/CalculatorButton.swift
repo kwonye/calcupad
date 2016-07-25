@@ -1,0 +1,17 @@
+//
+//  CalculatorButton.swift
+//  Calcpad
+//
+//  Created by Will Kwon on 7/17/16.
+//  Copyright © 2016 Will Kwon. All rights reserved.
+//
+
+import UIKit
+
+class CalculatorButton: UIButton {
+    override func drawRect(rect: CGRect) {
+        super.drawRect(rect)
+        layer.borderWidth = 0.5
+        layer.borderColor = UIColor.blackColor().CGColor
+    }
+}

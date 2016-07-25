@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE2AE70A1CACE5E50070BA65"
-               BuildableName = "CalcPad.app"
-               BlueprintName = "CalcPad"
-               ReferencedContainer = "container:CalcPad.xcodeproj">
+               BlueprintIdentifier = "BE063E8B1D3BF17900DBAD78"
+               BuildableName = "Calcpad.app"
+               BlueprintName = "Calcpad"
+               ReferencedContainer = "container:Calcpad.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE2AE7211CACE5E60070BA65"
-               BuildableName = "CalcPadTests.xctest"
-               BlueprintName = "CalcPadTests"
-               ReferencedContainer = "container:CalcPad.xcodeproj">
+               BlueprintIdentifier = "BE063EA21D3BF17900DBAD78"
+               BuildableName = "CalcpadTests.xctest"
+               BlueprintName = "CalcpadTests"
+               ReferencedContainer = "container:Calcpad.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BE2AE72C1CACE5E60070BA65"
-               BuildableName = "CalcPadUITests.xctest"
-               BlueprintName = "CalcPadUITests"
-               ReferencedContainer = "container:CalcPad.xcodeproj">
+               BlueprintIdentifier = "BE063EAD1D3BF17900DBAD78"
+               BuildableName = "CalcpadUITests.xctest"
+               BlueprintName = "CalcpadUITests"
+               ReferencedContainer = "container:Calcpad.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE2AE70A1CACE5E50070BA65"
-            BuildableName = "CalcPad.app"
-            BlueprintName = "CalcPad"
-            ReferencedContainer = "container:CalcPad.xcodeproj">
+            BlueprintIdentifier = "BE063E8B1D3BF17900DBAD78"
+            BuildableName = "Calcpad.app"
+            BlueprintName = "Calcpad"
+            ReferencedContainer = "container:Calcpad.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE2AE70A1CACE5E50070BA65"
-            BuildableName = "CalcPad.app"
-            BlueprintName = "CalcPad"
-            ReferencedContainer = "container:CalcPad.xcodeproj">
+            BlueprintIdentifier = "BE063E8B1D3BF17900DBAD78"
+            BuildableName = "Calcpad.app"
+            BlueprintName = "Calcpad"
+            ReferencedContainer = "container:Calcpad.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BE2AE70A1CACE5E50070BA65"
-            BuildableName = "CalcPad.app"
-            BlueprintName = "CalcPad"
-            ReferencedContainer = "container:CalcPad.xcodeproj">
+            BlueprintIdentifier = "BE063E8B1D3BF17900DBAD78"
+            BuildableName = "Calcpad.app"
+            BlueprintName = "Calcpad"
+            ReferencedContainer = "container:Calcpad.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

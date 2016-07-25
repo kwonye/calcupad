@@ -1,14 +1,14 @@
 //
-//  CalcPadUITests.swift
-//  CalcPadUITests
+//  CalcpadUITests.swift
+//  CalcpadUITests
 //
-//  Created by Will Kwon on 3/30/16.
+//  Created by Will Kwon on 7/17/16.
 //  Copyright © 2016 Will Kwon. All rights reserved.
 //
 
 import XCTest
 
-class CalcPadUITests: XCTestCase {
+class CalcpadUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
@@ -29,6 +29,8 @@ class CalcPadUITests: XCTestCase {
     }
     
     func testExample() {
-        XCTAssert(true)
+        // Use recording to get started writing UI tests.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
 }
