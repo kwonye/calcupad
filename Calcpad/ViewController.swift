@@ -69,7 +69,7 @@ class ViewController: UIViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
         
-        let result = results[indexPath.row]
+        let result = results[results.count - 1 - indexPath.row]
         
         cell!.textLabel!.text = result.valueForKey("equation") as? String
         
