@@ -16,14 +16,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var plusButton: CalculatorButton!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
+    let calculationEntityName = "Calculation"
+    let equationAttributeName = "equation"
+    let cellIdentifier = "Cell"
     let zero = "0"
     let period = "."
     let plus = "+"
     let minus = "−"
     let multiply = "×"
     let divide = "÷"
-    
     var results = [NSManagedObject]()
     var previousValue: Double?
     var currentValue: Double?
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
-        let fetchRequest = NSFetchRequest(entityName: "Calculation")
+        let fetchRequest = NSFetchRequest(entityName: calculationEntityName)
         
         do {
             let resultsRequest =
@@ -54,7 +55,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         operationButtons = [divideButton, multiplyButton, minusButton, plusButton];
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.reloadData()
     }
     
@@ -67,11 +68,11 @@ class ViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
         
         let result = results[results.count - 1 - indexPath.row]
         
-        cell!.textLabel!.text = result.valueForKey("equation") as? String
+        cell!.textLabel!.text = result.valueForKey(equationAttributeName) as? String
         
         return cell!
     }
@@ -174,11 +175,11 @@ class ViewController: UIViewController {
         let equation = "\(readableString(previousValue)) \(currentOperator!) \(readableString(currentValue)) = \(resultLabel.text!)"
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
-        let entity = NSEntityDescription.entityForName("Calculation", inManagedObjectContext: managedContext)
+        let entity = NSEntityDescription.entityForName(calculationEntityName, inManagedObjectContext: managedContext)
         
         let result = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
         
-        result.setValue(equation, forKey: "equation")
+        result.setValue(equation, forKey: equationAttributeName)
         
         do {
             try managedContext.save()
