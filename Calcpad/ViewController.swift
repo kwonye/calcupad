@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController {
     @IBOutlet weak var divideButton: CalculatorButton!
     @IBOutlet weak var multiplyButton: CalculatorButton!
     @IBOutlet weak var minusButton: CalculatorButton!
@@ -33,6 +33,22 @@ class ViewController: UIViewController, UITableViewDataSource {
     required init?(coder aDecoder: NSCoder) {
         previousValue = nil
         super.init(coder: aDecoder)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "Calculation")
+        
+        do {
+            let resultsRequest =
+                try managedContext.executeFetchRequest(fetchRequest)
+            results = resultsRequest as! [NSManagedObject]
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
     }
     
     override func viewDidLoad() {
