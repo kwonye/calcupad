@@ -1,15 +1,15 @@
 //
-//  CalcpadTests.swift
-//  CalcpadTests
+//  CalcupadTests.swift
+//  CalcupadTests
 //
-//  Created by Will Kwon on 7/17/16.
+//  Created by Will Kwon on 7/30/16.
 //  Copyright © 2016 Will Kwon. All rights reserved.
 //
 
 import XCTest
-@testable import Calcpad
+@testable import Calcupad
 
-class CalcpadTests: XCTestCase {
+class CalcupadTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
