@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +18,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Py-Yg-sJ6">
+                                <rect key="frame" x="28" y="0.0" width="552" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZV-HL-HXy">
+                                <rect key="frame" x="588" y="20" width="12" height="562.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E23-K9-zke">
+                                        <rect key="frame" x="0.0" y="542" width="4" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="E23-K9-zke" firstAttribute="leading" secondItem="DZV-HL-HXy" secondAttribute="leading" id="Iur-0R-Waj"/>
+                                    <constraint firstAttribute="bottom" secondItem="E23-K9-zke" secondAttribute="bottom" id="hVG-qG-1X5"/>
+                                    <constraint firstAttribute="trailing" secondItem="E23-K9-zke" secondAttribute="trailing" constant="8" id="x38-iW-Rmn"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F4a-kg-2qH">
+                                <rect key="frame" x="588" y="590.5" width="12" height="9.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F4a-kg-2qH" secondAttribute="height" multiplier="5:4" id="AGM-qu-8tF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DZV-HL-HXy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6se-cr-Kvy"/>
+                            <constraint firstItem="0Py-Yg-sJ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="9WQ-Gg-beS"/>
+                            <constraint firstItem="0Py-Yg-sJ6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="AnJ-m8-5hS"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="0Py-Yg-sJ6" secondAttribute="bottom" id="CF8-R4-exy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DZV-HL-HXy" secondAttribute="trailing" constant="-20" id="FaP-gi-1qJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F4a-kg-2qH" secondAttribute="trailing" constant="-20" id="cAc-vb-A5e"/>
+                            <constraint firstItem="F4a-kg-2qH" firstAttribute="top" secondItem="DZV-HL-HXy" secondAttribute="bottom" constant="8" id="f9f-fF-Kf8"/>
+                            <constraint firstItem="F4a-kg-2qH" firstAttribute="top" secondItem="DZV-HL-HXy" secondAttribute="bottom" constant="8" id="fat-gs-ZF7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Py-Yg-sJ6" secondAttribute="trailing" id="jjN-Vf-cEx"/>
+                            <constraint firstItem="DZV-HL-HXy" firstAttribute="leading" secondItem="0Py-Yg-sJ6" secondAttribute="trailing" constant="8" id="maZ-wN-vOT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F4a-kg-2qH" secondAttribute="bottom" id="xY1-Gq-BBG"/>
+                            <constraint firstItem="F4a-kg-2qH" firstAttribute="leading" secondItem="0Py-Yg-sJ6" secondAttribute="trailing" constant="8" id="yWd-H2-juo"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="266" y="429"/>
         </scene>
     </scenes>
 </document>
