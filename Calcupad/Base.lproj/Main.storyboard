@@ -15,54 +15,330 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="pOi-0u-Rv8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Py-Yg-sJ6">
-                                <rect key="frame" x="28" y="0.0" width="552" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eK9-dV-WcN">
+                                <rect key="frame" x="0.0" y="20" width="400" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="DZw-oW-cTa"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Rnl-GM-Ytr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="b80-mr-c0Z"/>
+                                </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZV-HL-HXy">
-                                <rect key="frame" x="588" y="20" width="12" height="562.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqm-MT-5G3">
+                                <rect key="frame" x="400" y="20" width="200" height="580"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E23-K9-zke">
-                                        <rect key="frame" x="0.0" y="542" width="4" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ojS-hc-gu6">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="580"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rs-lU-PYX">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="420"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Frj-xt-M06">
+                                                        <rect key="frame" x="0.0" y="292" width="192" height="120"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Frj-xt-M06" firstAttribute="leading" secondItem="6rs-lU-PYX" secondAttribute="leading" id="7E6-Z4-Jxv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Frj-xt-M06" secondAttribute="bottom" constant="8" id="8g0-0K-V9Q"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Frj-xt-M06" secondAttribute="trailing" constant="8" id="Kk2-3C-A2m"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XWq-lJ-T1B">
+                                                <rect key="frame" x="0.0" y="420" width="200" height="160"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xLy-cT-Hve">
+                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iln-FI-Gad" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="7">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UT2-My-Qq4"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytq-9r-oVa" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="8">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VGU-sD-4Ce"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj9-fO-hfw" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="80" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="9">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Chx-rH-5sz"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c2-Vm-CwV" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="÷">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DY2-1L-SLp"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNZ-b6-8wK" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="160" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="AC">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onAllClearTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="zpN-go-rFb"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Mjp-ni-pBn">
+                                                        <rect key="frame" x="0.0" y="40" width="200" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QW9-Rq-LHT" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="4">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nzJ-fP-iaf"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnO-dr-KKe" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="5">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35t-TI-fgA"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-hq-qfc" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="80" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="6">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Mr-Gk-2UB"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSJ-mI-Dhh" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="×">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AYc-ty-SLc"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7T-Bh-iKy" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="160" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="C">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onClearTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="40S-OV-u4i"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0R9-Qh-FLx">
+                                                        <rect key="frame" x="0.0" y="80" width="200" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-8I-7X1" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="1">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sGN-Ld-3mn"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3C-y5-gZV" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="2">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FpH-8C-HFy"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXJ-be-xjD" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="80" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="3">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCJ-vx-7W2"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANN-pR-vdi" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="-">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2PO-Si-APn"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPW-rL-6qW" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="160" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="←">
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onBackspaceTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="6qC-0u-aK6"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Jf1-CC-Rrm">
+                                                        <rect key="frame" x="0.0" y="120" width="200" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNU-hl-9Y6" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="±">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onNegativeTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Kw-MV-FrB"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZi-Ch-znO" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="40" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="0">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wL8-pi-SmR"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iq2-eq-Zdw" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="80" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title=".">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onPeriodTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="H7E-9d-2JR"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9c-WC-MUB" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="+">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FaO-pm-vFI"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzb-7B-NnG" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
+                                                                <rect key="frame" x="160" y="0.0" width="40" height="40"/>
+                                                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                                                <state key="normal" title="=">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="onEqualsTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="LJH-sA-Dd0"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="XWq-lJ-T1B" secondAttribute="height" multiplier="5:4" id="yVe-ZJ-jcG"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="6rs-lU-PYX" firstAttribute="top" secondItem="ojS-hc-gu6" secondAttribute="top" id="8Op-hP-0Aq"/>
+                                            <constraint firstAttribute="trailing" secondItem="6rs-lU-PYX" secondAttribute="trailing" id="8gx-03-oat"/>
+                                            <constraint firstItem="XWq-lJ-T1B" firstAttribute="top" secondItem="6rs-lU-PYX" secondAttribute="bottom" id="ClO-eu-JGe"/>
+                                            <constraint firstItem="6rs-lU-PYX" firstAttribute="leading" secondItem="ojS-hc-gu6" secondAttribute="leading" id="w8D-mR-bMu"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="E23-K9-zke" firstAttribute="leading" secondItem="DZV-HL-HXy" secondAttribute="leading" id="Iur-0R-Waj"/>
-                                    <constraint firstAttribute="bottom" secondItem="E23-K9-zke" secondAttribute="bottom" id="hVG-qG-1X5"/>
-                                    <constraint firstAttribute="trailing" secondItem="E23-K9-zke" secondAttribute="trailing" constant="8" id="x38-iW-Rmn"/>
+                                    <constraint firstItem="ojS-hc-gu6" firstAttribute="top" secondItem="dqm-MT-5G3" secondAttribute="top" id="0ss-7Y-lb3"/>
+                                    <constraint firstAttribute="trailing" secondItem="ojS-hc-gu6" secondAttribute="trailing" id="53J-nz-Qk1"/>
+                                    <constraint firstItem="ojS-hc-gu6" firstAttribute="leading" secondItem="dqm-MT-5G3" secondAttribute="leading" id="K3d-MH-baF"/>
+                                    <constraint firstAttribute="bottom" secondItem="ojS-hc-gu6" secondAttribute="bottom" id="NJF-Eo-cDl"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F4a-kg-2qH">
-                                <rect key="frame" x="588" y="590.5" width="12" height="9.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="F4a-kg-2qH" secondAttribute="height" multiplier="5:4" id="AGM-qu-8tF"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DZV-HL-HXy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6se-cr-Kvy"/>
-                            <constraint firstItem="0Py-Yg-sJ6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="9WQ-Gg-beS"/>
-                            <constraint firstItem="0Py-Yg-sJ6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="AnJ-m8-5hS"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="0Py-Yg-sJ6" secondAttribute="bottom" id="CF8-R4-exy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DZV-HL-HXy" secondAttribute="trailing" constant="-20" id="FaP-gi-1qJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="F4a-kg-2qH" secondAttribute="trailing" constant="-20" id="cAc-vb-A5e"/>
-                            <constraint firstItem="F4a-kg-2qH" firstAttribute="top" secondItem="DZV-HL-HXy" secondAttribute="bottom" constant="8" id="f9f-fF-Kf8"/>
-                            <constraint firstItem="F4a-kg-2qH" firstAttribute="top" secondItem="DZV-HL-HXy" secondAttribute="bottom" constant="8" id="fat-gs-ZF7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0Py-Yg-sJ6" secondAttribute="trailing" id="jjN-Vf-cEx"/>
-                            <constraint firstItem="DZV-HL-HXy" firstAttribute="leading" secondItem="0Py-Yg-sJ6" secondAttribute="trailing" constant="8" id="maZ-wN-vOT"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F4a-kg-2qH" secondAttribute="bottom" id="xY1-Gq-BBG"/>
-                            <constraint firstItem="F4a-kg-2qH" firstAttribute="leading" secondItem="0Py-Yg-sJ6" secondAttribute="trailing" constant="8" id="yWd-H2-juo"/>
+                            <constraint firstItem="dqm-MT-5G3" firstAttribute="leading" secondItem="eK9-dV-WcN" secondAttribute="trailing" id="7mm-yu-ppc"/>
+                            <constraint firstItem="eK9-dV-WcN" firstAttribute="top" secondItem="dqm-MT-5G3" secondAttribute="top" id="HsC-iu-LDl"/>
+                            <constraint firstItem="eK9-dV-WcN" firstAttribute="leading" secondItem="pOi-0u-Rv8" secondAttribute="leadingMargin" constant="-20" id="Jct-P7-rZ1"/>
+                            <constraint firstItem="eK9-dV-WcN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NFc-yd-5zy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dqm-MT-5G3" secondAttribute="trailing" constant="-20" id="e2t-6N-GV6"/>
+                            <constraint firstItem="eK9-dV-WcN" firstAttribute="bottom" secondItem="dqm-MT-5G3" secondAttribute="bottom" id="xHy-En-SU9"/>
+                            <constraint firstItem="eK9-dV-WcN" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="y7e-9R-oWb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="divideButton" destination="9c2-Vm-CwV" id="SCA-O5-txg"/>
+                        <outlet property="minusButton" destination="ANN-pR-vdi" id="MwG-IS-uKz"/>
+                        <outlet property="multiplyButton" destination="tSJ-mI-Dhh" id="8bP-tL-G4G"/>
+                        <outlet property="plusButton" destination="z9c-WC-MUB" id="LqV-XO-mv4"/>
+                        <outlet property="resultLabel" destination="Frj-xt-M06" id="ObY-l2-JBY"/>
+                        <outlet property="tableView" destination="eK9-dV-WcN" id="6Qw-ui-Gvi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
