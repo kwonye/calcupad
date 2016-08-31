@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Calcpad
+//  Calcupad
 //
-//  Created by Will Kwon on 7/17/16.
+//  Created by Will Kwon on 7/30/16.
 //  Copyright © 2016 Will Kwon. All rights reserved.
 //
 
@@ -47,14 +47,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.willkwon.Calcpad" in the application's documents Application Support directory.
+        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.willkwon.Calcupad" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1]
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("Calcpad", withExtension: "momd")!
+        let modelURL = NSBundle.mainBundle().URLForResource("Calcupad", withExtension: "momd")!
         return NSManagedObjectModel(contentsOfURL: modelURL)!
     }()
 

@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Calcpad
+//  Calcupad
 //
-//  Created by Will Kwon on 7/17/16.
+//  Created by Will Kwon on 7/30/16.
 //  Copyright © 2016 Will Kwon. All rights reserved.
 //
 
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         
         return cell!
     }
-
+    
     @IBAction func onNumberTapped(sender: CalculatorButton) {
         let inputText = sender.titleLabel!.text!
         var currentText = resultLabel.text!
@@ -90,7 +90,7 @@ class ViewController: UIViewController {
         currentValue = Double(currentText)
         resultLabel.text = currentText
     }
-
+    
     @IBAction func onPeriodTapped() {
         guard let currentText = resultLabel.text where !currentText.containsString(period) else {
             return
@@ -208,7 +208,7 @@ class ViewController: UIViewController {
             return String(value!)
         }
     }
-
+    
     func solveEquation() -> Double? {
         guard let secondValue = currentValue, solutionOperator = currentOperator else {
             return nil

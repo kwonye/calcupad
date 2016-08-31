@@ -10,38 +10,38 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calcpad" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calcupad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="pOi-0u-Rv8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GEm-Qb-dhP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eK9-dV-WcN">
                                 <rect key="frame" x="0.0" y="20" width="400" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="R6J-Nu-sUl"/>
+                                    <constraint firstAttribute="width" constant="400" id="DZw-oW-cTa"/>
                                 </constraints>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="sgv-7l-IhC"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Iyt-AU-Pnf"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Rnl-GM-Ytr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="b80-mr-c0Z"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svN-Pz-xcQ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqm-MT-5G3">
                                 <rect key="frame" x="400" y="20" width="200" height="580"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1YW-Tu-K1D">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ojS-hc-gu6">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="580"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Af-Hp-Q0v">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rs-lU-PYX">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="420"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qVG-fN-jVW">
-                                                        <rect key="frame" x="0.0" y="292.5" width="192" height="119.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Frj-xt-M06">
+                                                        <rect key="frame" x="0.0" y="292" width="192" height="120"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -49,51 +49,51 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="qVG-fN-jVW" secondAttribute="bottom" constant="8" id="dbu-kO-kSK"/>
-                                                    <constraint firstAttribute="trailing" secondItem="qVG-fN-jVW" secondAttribute="trailing" constant="8" id="egU-uR-cpO"/>
-                                                    <constraint firstItem="qVG-fN-jVW" firstAttribute="leading" secondItem="7Af-Hp-Q0v" secondAttribute="leading" id="y2t-Aq-6Z4"/>
+                                                    <constraint firstItem="Frj-xt-M06" firstAttribute="leading" secondItem="6rs-lU-PYX" secondAttribute="leading" id="7E6-Z4-Jxv"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Frj-xt-M06" secondAttribute="bottom" constant="8" id="8g0-0K-V9Q"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Frj-xt-M06" secondAttribute="trailing" constant="8" id="Kk2-3C-A2m"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rrn-ix-HVY">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XWq-lJ-T1B">
                                                 <rect key="frame" x="0.0" y="420" width="200" height="160"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MzY-Jc-TZD">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xLy-cT-Hve">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7O-kz-Nyt" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iln-FI-Gad" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="7">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAi-kY-D2i"/>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UT2-My-Qq4"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-Cf-AXP" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytq-9r-oVa" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="40" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="8">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MeM-bJ-8wZ"/>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VGU-sD-4Ce"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldT-fv-fgT" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj9-fO-hfw" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="80" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="9">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h28-Zj-hqb"/>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Chx-rH-5sz"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amr-qI-s9M" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c2-Vm-CwV" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="120" y="0.0" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
@@ -101,59 +101,59 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWj-wV-VPd"/>
+                                                                    <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DY2-1L-SLp"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOJ-9I-VLY" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNZ-b6-8wK" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="160" y="0.0" width="40" height="40"/>
                                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="AC">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onAllClearTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="gbF-0T-JGB"/>
+                                                                    <action selector="onAllClearTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="zpN-go-rFb"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fse-ke-z7P">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Mjp-ni-pBn">
                                                         <rect key="frame" x="0.0" y="40" width="200" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cz-nO-djj" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QW9-Rq-LHT" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="4">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mhl-lR-lvG"/>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nzJ-fP-iaf"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD2-EE-WWU" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnO-dr-KKe" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="40" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="5">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5d-fo-fFw"/>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35t-TI-fgA"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbw-hx-ABD" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-hq-qfc" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="80" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="6">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZi-PS-jxh"/>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Mr-Gk-2UB"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXa-ZO-IgT" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSJ-mI-Dhh" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="120" y="0.0" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
@@ -161,59 +161,59 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSI-wb-I4A"/>
+                                                                    <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AYc-ty-SLc"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lI-D9-eJm" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7T-Bh-iKy" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="160" y="0.0" width="40" height="40"/>
                                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="C">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onClearTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZs-Zy-e7t"/>
+                                                                    <action selector="onClearTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="40S-OV-u4i"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1Fs-Qp-WVA">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0R9-Qh-FLx">
                                                         <rect key="frame" x="0.0" y="80" width="200" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYh-g4-q5V" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-8I-7X1" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="1">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J6k-an-Q0l"/>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sGN-Ld-3mn"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKi-da-Uha" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3C-y5-gZV" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="40" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="2">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bie-G4-djs"/>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FpH-8C-HFy"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yy-RK-8VX" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXJ-be-xjD" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="80" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="3">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iVi-TN-lMg"/>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCJ-vx-7W2"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i26-b2-ttv" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANN-pR-vdi" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="120" y="0.0" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
@@ -221,59 +221,59 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fb9-CB-ikq"/>
+                                                                    <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2PO-Si-APn"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAH-xj-Gbf" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPW-rL-6qW" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="160" y="0.0" width="40" height="40"/>
                                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="←">
-                                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onBackspaceTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKg-pp-JSC"/>
+                                                                    <action selector="onBackspaceTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="6qC-0u-aK6"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bee-vA-hji">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Jf1-CC-Rrm">
                                                         <rect key="frame" x="0.0" y="120" width="200" height="40"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5go-FI-mrL" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNU-hl-9Y6" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="±">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onNegativeTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="vyd-3T-u44"/>
+                                                                    <action selector="onNegativeTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Kw-MV-FrB"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="681-z3-HQV" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZi-Ch-znO" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="40" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title="0">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycu-ku-Q5b"/>
+                                                                    <action selector="onNumberTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wL8-pi-SmR"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdG-cW-J5h" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iq2-eq-Zdw" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="80" y="0.0" width="40" height="40"/>
-                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
                                                                 <state key="normal" title=".">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onPeriodTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZM9-P9-39O"/>
+                                                                    <action selector="onPeriodTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="H7E-9d-2JR"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPq-5V-cId" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9c-WC-MUB" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="120" y="0.0" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
@@ -281,10 +281,10 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Wa-U1-fw8"/>
+                                                                    <action selector="onOperationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FaO-pm-vFI"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1al-Eo-BoX" customClass="CalculatorButton" customModule="Calcpad" customModuleProvider="target">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzb-7B-NnG" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
                                                                 <rect key="frame" x="160" y="0.0" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
@@ -292,53 +292,52 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onEqualsTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="UTK-5b-ok4"/>
+                                                                    <action selector="onEqualsTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="LJH-sA-Dd0"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="Rrn-ix-HVY" secondAttribute="height" multiplier="5:4" id="esS-Fx-cFO"/>
+                                                    <constraint firstAttribute="width" secondItem="XWq-lJ-T1B" secondAttribute="height" multiplier="5:4" id="yVe-ZJ-jcG"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="7Af-Hp-Q0v" firstAttribute="leading" secondItem="1YW-Tu-K1D" secondAttribute="leading" id="1Sl-m1-m06"/>
-                                            <constraint firstItem="7Af-Hp-Q0v" firstAttribute="top" secondItem="1YW-Tu-K1D" secondAttribute="top" id="IPg-Ni-ovQ"/>
-                                            <constraint firstAttribute="trailing" secondItem="7Af-Hp-Q0v" secondAttribute="trailing" id="jJS-pv-iFa"/>
-                                            <constraint firstItem="Rrn-ix-HVY" firstAttribute="top" secondItem="7Af-Hp-Q0v" secondAttribute="bottom" id="me6-eK-Igt"/>
+                                            <constraint firstItem="6rs-lU-PYX" firstAttribute="top" secondItem="ojS-hc-gu6" secondAttribute="top" id="8Op-hP-0Aq"/>
+                                            <constraint firstAttribute="trailing" secondItem="6rs-lU-PYX" secondAttribute="trailing" id="8gx-03-oat"/>
+                                            <constraint firstItem="XWq-lJ-T1B" firstAttribute="top" secondItem="6rs-lU-PYX" secondAttribute="bottom" id="ClO-eu-JGe"/>
+                                            <constraint firstItem="6rs-lU-PYX" firstAttribute="leading" secondItem="ojS-hc-gu6" secondAttribute="leading" id="w8D-mR-bMu"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="1YW-Tu-K1D" secondAttribute="bottom" id="9P7-w1-PC8"/>
-                                    <constraint firstAttribute="trailing" secondItem="1YW-Tu-K1D" secondAttribute="trailing" id="YNL-3O-wq9"/>
-                                    <constraint firstItem="1YW-Tu-K1D" firstAttribute="top" secondItem="svN-Pz-xcQ" secondAttribute="top" id="jiX-ol-fVK"/>
-                                    <constraint firstItem="1YW-Tu-K1D" firstAttribute="leading" secondItem="svN-Pz-xcQ" secondAttribute="leading" id="uAg-8b-HaX"/>
+                                    <constraint firstItem="ojS-hc-gu6" firstAttribute="top" secondItem="dqm-MT-5G3" secondAttribute="top" id="0ss-7Y-lb3"/>
+                                    <constraint firstAttribute="trailing" secondItem="ojS-hc-gu6" secondAttribute="trailing" id="53J-nz-Qk1"/>
+                                    <constraint firstItem="ojS-hc-gu6" firstAttribute="leading" secondItem="dqm-MT-5G3" secondAttribute="leading" id="K3d-MH-baF"/>
+                                    <constraint firstAttribute="bottom" secondItem="ojS-hc-gu6" secondAttribute="bottom" id="NJF-Eo-cDl"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GEm-Qb-dhP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Iuv-Gw-VSM"/>
-                            <constraint firstItem="svN-Pz-xcQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MHr-fK-LBB"/>
-                            <constraint firstItem="svN-Pz-xcQ" firstAttribute="leading" secondItem="GEm-Qb-dhP" secondAttribute="trailing" id="VGZ-fU-FML"/>
-                            <constraint firstItem="GEm-Qb-dhP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="VGb-ZD-yO8"/>
-                            <constraint firstItem="svN-Pz-xcQ" firstAttribute="leading" secondItem="GEm-Qb-dhP" secondAttribute="trailing" id="Y9U-iI-f6e"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="svN-Pz-xcQ" secondAttribute="trailing" constant="-20" id="ck2-fo-f2S"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="svN-Pz-xcQ" secondAttribute="bottom" id="mgc-AW-aZb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GEm-Qb-dhP" secondAttribute="bottom" id="yrW-a7-xYR"/>
+                            <constraint firstItem="dqm-MT-5G3" firstAttribute="leading" secondItem="eK9-dV-WcN" secondAttribute="trailing" id="7mm-yu-ppc"/>
+                            <constraint firstItem="eK9-dV-WcN" firstAttribute="top" secondItem="dqm-MT-5G3" secondAttribute="top" id="HsC-iu-LDl"/>
+                            <constraint firstItem="eK9-dV-WcN" firstAttribute="leading" secondItem="pOi-0u-Rv8" secondAttribute="leadingMargin" constant="-20" id="Jct-P7-rZ1"/>
+                            <constraint firstItem="eK9-dV-WcN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NFc-yd-5zy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dqm-MT-5G3" secondAttribute="trailing" constant="-20" id="e2t-6N-GV6"/>
+                            <constraint firstItem="eK9-dV-WcN" firstAttribute="bottom" secondItem="dqm-MT-5G3" secondAttribute="bottom" id="xHy-En-SU9"/>
+                            <constraint firstItem="eK9-dV-WcN" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="y7e-9R-oWb"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="divideButton" destination="Amr-qI-s9M" id="9ij-Xm-nBa"/>
-                        <outlet property="minusButton" destination="i26-b2-ttv" id="3He-pj-aZZ"/>
-                        <outlet property="multiplyButton" destination="eXa-ZO-IgT" id="oi7-ah-bXm"/>
-                        <outlet property="plusButton" destination="oPq-5V-cId" id="APt-DX-9pm"/>
-                        <outlet property="resultLabel" destination="qVG-fN-jVW" id="UsX-hD-q26"/>
-                        <outlet property="tableView" destination="GEm-Qb-dhP" id="hK9-qh-Z60"/>
+                        <outlet property="divideButton" destination="9c2-Vm-CwV" id="SCA-O5-txg"/>
+                        <outlet property="minusButton" destination="ANN-pR-vdi" id="MwG-IS-uKz"/>
+                        <outlet property="multiplyButton" destination="tSJ-mI-Dhh" id="8bP-tL-G4G"/>
+                        <outlet property="plusButton" destination="z9c-WC-MUB" id="LqV-XO-mv4"/>
+                        <outlet property="resultLabel" destination="Frj-xt-M06" id="ObY-l2-JBY"/>
+                        <outlet property="tableView" destination="eK9-dV-WcN" id="6Qw-ui-Gvi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

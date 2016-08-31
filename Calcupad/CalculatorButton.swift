@@ -1,8 +1,8 @@
 //
 //  CalculatorButton.swift
-//  Calcpad
+//  Calcupad
 //
-//  Created by Will Kwon on 7/17/16.
+//  Created by Will Kwon on 8/10/16.
 //  Copyright © 2016 Will Kwon. All rights reserved.
 //
 
