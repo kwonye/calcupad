@@ -206,7 +206,6 @@
 					};
 					BE05B8DB1D4D266600071A84 = {
 						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = BE05B8B91D4D266600071A84;
 					};
 				};
 			};
@@ -458,7 +457,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.CalcupadUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Calcupad;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -469,7 +468,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.CalcupadUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Calcupad;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
