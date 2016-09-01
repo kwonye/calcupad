@@ -206,6 +206,7 @@
 					};
 					BE05B8DB1D4D266600071A84 = {
 						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = BE05B8B91D4D266600071A84;
 					};
 				};
 			};
@@ -458,6 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.CalcupadUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TEST_TARGET_NAME = Calcupad;
 			};
 			name = Debug;
 		};
@@ -469,6 +471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.CalcupadUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TEST_TARGET_NAME = Calcupad;
 			};
 			name = Release;
 		};
