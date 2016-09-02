@@ -16,15 +16,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var plusButton: CalculatorButton!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    let calculator: Calculator
     let calculationEntityName = "Calculation"
     let equationAttributeName = "equation"
     let cellIdentifier = "Cell"
     let zero = "0"
     let period = "."
-    let plus = "+"
-    let minus = "−"
-    let multiply = "×"
-    let divide = "÷"
     var results = [NSManagedObject]()
     var previousValue: Double?
     var currentValue: Double?
@@ -33,6 +30,7 @@ class ViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         previousValue = nil
+        calculator = Calculator()
         super.init(coder: aDecoder)
     }
     
@@ -121,11 +119,11 @@ class ViewController: UIViewController {
             return
         }
         
-        if currentText.containsString(minus) {
+        if currentText.containsString(calculator.minus) {
             currentText.removeAtIndex(currentText.startIndex)
             resultLabel.text = currentText
         } else {
-            resultLabel.text = minus + currentText
+            resultLabel.text = calculator.minus + currentText
         }
     }
     
@@ -153,7 +151,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onEqualsTapped() {
-        guard let solution = solveEquation() else {
+        guard let solution = calculator.solveEquation(previousValue, secondValue: currentValue, currentOperator: currentOperator) else {
             return
         }
         
@@ -206,29 +204,6 @@ class ViewController: UIViewController {
             return String(Int(value!))
         } else {
             return String(value!)
-        }
-    }
-    
-    func solveEquation() -> Double? {
-        guard let secondValue = currentValue, solutionOperator = currentOperator else {
-            return nil
-        }
-        
-        guard let firstValue = previousValue else {
-            return nil
-        }
-        
-        switch solutionOperator {
-        case plus:
-            return firstValue + secondValue
-        case minus:
-            return firstValue - secondValue
-        case multiply:
-            return firstValue * secondValue
-        case divide:
-            return firstValue / secondValue
-        default:
-            return nil
         }
     }
 }
