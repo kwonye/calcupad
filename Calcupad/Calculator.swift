@@ -14,8 +14,6 @@ class Calculator: NSObject {
     let multiply = "×"
     let divide = "÷"
     
-    
-    
     func solveEquation(firstValue: Double?, secondValue: Double?, currentOperator: String?) -> Double? {
         guard let firstValue = firstValue, let secondValue = secondValue, let currentOperator = currentOperator else {
             return nil
