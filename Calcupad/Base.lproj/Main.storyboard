@@ -20,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eK9-dV-WcN">
-                                <rect key="frame" x="0.0" y="20" width="180" height="580"/>
+                                <rect key="frame" x="0.0" y="20" width="380" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="380" id="DZw-oW-cTa"/>
+                                    <constraint firstAttribute="width" constant="380" id="DZw-oW-cTa"/>
                                 </constraints>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -32,16 +32,16 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqm-MT-5G3">
-                                <rect key="frame" x="180" y="20" width="420" height="580"/>
+                                <rect key="frame" x="380" y="20" width="220" height="580"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ojS-hc-gu6">
-                                        <rect key="frame" x="0.0" y="0.0" width="420" height="580"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="580"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rs-lU-PYX">
-                                                <rect key="frame" x="0.0" y="0.0" width="420" height="244"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="220" height="404"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Frj-xt-M06">
-                                                        <rect key="frame" x="0.0" y="116" width="412" height="120"/>
+                                                        <rect key="frame" x="0.0" y="276" width="212" height="120"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -55,13 +55,13 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XWq-lJ-T1B">
-                                                <rect key="frame" x="0.0" y="244" width="420" height="336"/>
+                                                <rect key="frame" x="0.0" y="404" width="220" height="176"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xLy-cT-Hve">
-                                                        <rect key="frame" x="0.0" y="0.0" width="420" height="84"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="220" height="44"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iln-FI-Gad" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="7">
@@ -72,7 +72,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytq-9r-oVa" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="84" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="44" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="8">
@@ -83,7 +83,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj9-fO-hfw" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="168" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="88" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="9">
@@ -94,7 +94,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c2-Vm-CwV" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="252" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="132" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="÷">
@@ -105,7 +105,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNZ-b6-8wK" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="336" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="176" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="AC">
@@ -118,10 +118,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Mjp-ni-pBn">
-                                                        <rect key="frame" x="0.0" y="84" width="420" height="84"/>
+                                                        <rect key="frame" x="0.0" y="44" width="220" height="44"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QW9-Rq-LHT" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="4">
@@ -132,7 +132,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnO-dr-KKe" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="84" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="44" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="5">
@@ -143,7 +143,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-hq-qfc" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="168" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="88" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="6">
@@ -154,7 +154,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSJ-mI-Dhh" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="252" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="132" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="×">
@@ -165,7 +165,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7T-Bh-iKy" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="336" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="176" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="C">
@@ -178,10 +178,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0R9-Qh-FLx">
-                                                        <rect key="frame" x="0.0" y="168" width="420" height="84"/>
+                                                        <rect key="frame" x="0.0" y="88" width="220" height="44"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-8I-7X1" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="1">
@@ -192,7 +192,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3C-y5-gZV" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="84" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="44" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="2">
@@ -203,7 +203,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXJ-be-xjD" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="168" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="88" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="3">
@@ -214,7 +214,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANN-pR-vdi" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="252" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="132" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="-">
@@ -225,7 +225,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPW-rL-6qW" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="336" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="176" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="←">
@@ -238,10 +238,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Jf1-CC-Rrm">
-                                                        <rect key="frame" x="0.0" y="252" width="420" height="84"/>
+                                                        <rect key="frame" x="0.0" y="132" width="220" height="44"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNU-hl-9Y6" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="±">
@@ -252,7 +252,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZi-Ch-znO" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="84" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="44" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="0">
@@ -263,7 +263,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iq2-eq-Zdw" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="168" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="88" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title=".">
@@ -274,7 +274,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9c-WC-MUB" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="252" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="132" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="+">
@@ -285,7 +285,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzb-7B-NnG" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
-                                                                <rect key="frame" x="336" y="0.0" width="84" height="84"/>
+                                                                <rect key="frame" x="176" y="0.0" width="44" height="44"/>
                                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="60"/>
                                                                 <state key="normal" title="=">
