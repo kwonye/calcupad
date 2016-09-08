@@ -8,6 +8,26 @@
 
 import UIKit
 import CoreData
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class ViewController: UIViewController {
     @IBOutlet weak var divideButton: CalculatorButton!
@@ -34,16 +54,16 @@ class ViewController: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: calculationEntityName)
         
         do {
             let resultsRequest =
-                try managedContext.executeFetchRequest(fetchRequest)
+                try managedContext.fetch(fetchRequest)
             results = resultsRequest as! [NSManagedObject]
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
@@ -53,29 +73,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         operationButtons = [divideButton, multiplyButton, minusButton, plusButton];
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.reloadData()
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return results.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         
-        let result = results[results.count - 1 - indexPath.row]
+        let result = results[results.count - 1 - (indexPath as NSIndexPath).row]
         
-        cell!.textLabel!.text = result.valueForKey(equationAttributeName) as? String
+        cell!.textLabel!.text = result.value(forKey: equationAttributeName) as? String
         
         return cell!
     }
     
-    @IBAction func onNumberTapped(sender: CalculatorButton) {
+    @IBAction func onNumberTapped(_ sender: CalculatorButton) {
         let inputText = sender.titleLabel!.text!
         var currentText = resultLabel.text!
         
@@ -90,14 +110,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onPeriodTapped() {
-        guard let currentText = resultLabel.text where !currentText.containsString(period) else {
+        guard let currentText = resultLabel.text , !currentText.contains(period) else {
             return
         }
         
         if currentValue == nil {
             resultLabel.text = zero + period
         } else {
-            resultLabel.text?.appendContentsOf(period)
+            resultLabel.text?.append(period)
         }
         currentValue = Double(currentText)
     }
@@ -110,24 +130,24 @@ class ViewController: UIViewController {
                 resultLabel.text = zero
             }
         } else {
-            resultLabel.text = currentText.substringToIndex(currentText.endIndex.predecessor())
+            resultLabel.text = currentText.substring(to: currentText.characters.index(before: currentText.endIndex))
         }
     }
     
     @IBAction func onNegativeTapped() {
-        guard var currentText = resultLabel.text where currentText != zero else {
+        guard var currentText = resultLabel.text , currentText != zero else {
             return
         }
         
-        if currentText.containsString(calculator.minus) {
-            currentText.removeAtIndex(currentText.startIndex)
+        if currentText.contains(calculator.minus) {
+            currentText.remove(at: currentText.startIndex)
             resultLabel.text = currentText
         } else {
             resultLabel.text = calculator.minus + currentText
         }
     }
     
-    @IBAction func onOperationTapped(sender: CalculatorButton) {
+    @IBAction func onOperationTapped(_ sender: CalculatorButton) {
         if previousValue != nil {
             previousValue = Double(resultLabel.text!)!
             onEqualsTapped()
@@ -171,11 +191,11 @@ class ViewController: UIViewController {
     
     func saveToCoreData() {
         let equation = "\(readableString(previousValue)) \(currentOperator!) \(readableString(currentValue)) = \(resultLabel.text!)"
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
-        let entity = NSEntityDescription.entityForName(calculationEntityName, inManagedObjectContext: managedContext)
+        let entity = NSEntityDescription.entity(forEntityName: calculationEntityName, in: managedContext)
         
-        let result = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        let result = NSManagedObject(entity: entity!, insertInto: managedContext)
         
         result.setValue(equation, forKey: equationAttributeName)
         
@@ -195,12 +215,12 @@ class ViewController: UIViewController {
         }
     }
     
-    func readableString(value: Double?) -> String {
+    func readableString(_ value: Double?) -> String {
         if value > Double(Int.max) {
             return NSLocalizedString("Number too large", comment: "Number being too large")
         }
         
-        if value! % 1 == 0 {
+        if value!.truncatingRemainder(dividingBy: 1) == 0 {
             return String(Int(value!))
         } else {
             return String(value!)
