@@ -9,13 +9,13 @@
 import UIKit
 
 class CalculatorButton: UIButton {
-    override func drawRect(rect: CGRect) {
-        super.drawRect(rect)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
         layer.borderWidth = 0.5
-        layer.borderColor = UIColor.blackColor().CGColor
+        layer.borderColor = UIColor.black.cgColor
     }
     
-    func toggleHighlighted(isHighlighted: Bool) {
+    func toggleHighlighted(_ isHighlighted: Bool) {
         if isHighlighted {
             layer.borderWidth = 3
         } else {
