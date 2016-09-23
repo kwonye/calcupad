@@ -1,6 +1,2 @@
 language: objective-c
-script: xcodebuild build test \
-            -project Calcupad.xcodeproj \
-            -scheme Calcupad \
-            -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPad Pro (12.9 inch)'
+script: xcodebuild -project Calcupad.xcodeproj -scheme Calcupad -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPad Pro (12.9 inch)' build test
