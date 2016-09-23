@@ -59,12 +59,11 @@ class ViewController: UIViewController {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
-        let fetchRequest = NSFetchRequest(entityName: calculationEntityName)
-        
+        let fetchRequest: NSFetchRequest<NSManagedObject> = NSFetchRequest(entityName: calculationEntityName)
+
         do {
-            let resultsRequest =
-                try managedContext.fetch(fetchRequest)
-            results = resultsRequest as! [NSManagedObject]
+            let resultsRequest = try managedContext.fetch(fetchRequest)
+            results = resultsRequest
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
