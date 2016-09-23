@@ -205,15 +205,18 @@
 				TargetAttributes = {
 					BE05B8B91D4D266600071A84 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = SU5JDRYRBL;
 						LastSwiftMigration = 0800;
 					};
 					BE05B8D01D4D266600071A84 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = SU5JDRYRBL;
 						LastSwiftMigration = 0800;
 						TestTargetID = BE05B8B91D4D266600071A84;
 					};
 					BE05B8DB1D4D266600071A84 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = SU5JDRYRBL;
 						LastSwiftMigration = 0800;
 						TestTargetID = BE05B8B91D4D266600071A84;
 					};
@@ -426,6 +429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				DEVELOPMENT_TEAM = SU5JDRYRBL;
 				INFOPLIST_FILE = Calcupad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.calcupad;
@@ -439,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				DEVELOPMENT_TEAM = SU5JDRYRBL;
 				INFOPLIST_FILE = Calcupad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.calcupad;
@@ -451,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = SU5JDRYRBL;
 				INFOPLIST_FILE = CalcupadTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.CalcupadTests;
@@ -464,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = SU5JDRYRBL;
 				INFOPLIST_FILE = CalcupadTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.CalcupadTests;
@@ -476,6 +483,7 @@
 		BE05B8EC1D4D266600071A84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = SU5JDRYRBL;
 				INFOPLIST_FILE = CalcupadUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.CalcupadUITests;
@@ -489,6 +497,7 @@
 		BE05B8ED1D4D266600071A84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = SU5JDRYRBL;
 				INFOPLIST_FILE = CalcupadUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.CalcupadUITests;
