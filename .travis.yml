@@ -1,5 +1,6 @@
 language: objective-c
-osx_image: xcode8
-xcode_sdk: iphonesimulator
-xcode_project: Calcupad.xcodeproj
-xcode_scheme: Calcupad
+script: xcodebuild build test \
+            -project Calcupad.xcodeproj \
+            -scheme Calcupad \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPad Pro (12.9 inch)'
