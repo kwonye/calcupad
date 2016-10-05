@@ -195,14 +195,17 @@ class ViewController: UIViewController {
     }
     
     func readableString(_ value: Double?) -> String {
-        if value > Double(Int.max) {
+        guard let currentValue = value else {
+            return NSLocalizedString("Ran into an error", comment: "Ran into an error")
+        }
+        if currentValue > Double(Int.max) {
             return NSLocalizedString("Number too large", comment: "Number being too large")
         }
         
         if value!.truncatingRemainder(dividingBy: 1) == 0 {
-            return String(Int(value!))
+            return String(Int(currentValue))
         } else {
-            return String(value!)
+            return String(currentValue)
         }
     }
 }
