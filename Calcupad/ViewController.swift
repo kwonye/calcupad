@@ -168,6 +168,11 @@ class ViewController: UIViewController {
         highlightOperationButton()
     }
     
+    @IBAction func onClearButtonTapped(_ sender: UIBarButtonItem) {
+        results.removeAll()
+        tableView.reloadData()
+    }
+    
     func saveToCoreData() {
         let equation = "\(readableString(previousValue)) \(currentOperator!) \(readableString(currentValue)) = \(resultLabel.text!)"
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
