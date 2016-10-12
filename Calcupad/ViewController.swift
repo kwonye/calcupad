@@ -169,7 +169,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onClearButtonTapped(_ sender: UIBarButtonItem) {
-        results.removeAll()
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: calculationEntityName)
+        let fetchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            try appDelegate.managedObjectContext.execute(fetchDeleteRequest)
+            results.removeAll()
+        } catch let error as NSError {
+            print("Couldn't save object because of error: \(error)")
+        }
+        
         tableView.reloadData()
     }
     
