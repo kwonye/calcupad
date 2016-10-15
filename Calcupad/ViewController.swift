@@ -8,26 +8,6 @@
 
 import UIKit
 import CoreData
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l > r
-  default:
-    return rhs < lhs
-  }
-}
-
 
 class ViewController: UIViewController {
     @IBOutlet weak var divideButton: CalculatorButton!
@@ -89,6 +69,8 @@ class ViewController: UIViewController {
         
         let result = results[results.count - 1 - (indexPath as NSIndexPath).row]
         
+        cell!.backgroundColor = UIColor.darkText
+        cell!.textLabel!.textColor = UIColor.white
         cell!.textLabel!.text = result.value(forKey: equationAttributeName) as? String
         
         return cell!
@@ -188,6 +170,21 @@ class ViewController: UIViewController {
         highlightOperationButton()
     }
     
+    @IBAction func onClearButtonTapped(_ sender: UIBarButtonItem) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: calculationEntityName)
+        let fetchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            try appDelegate.managedObjectContext.execute(fetchDeleteRequest)
+            results.removeAll()
+        } catch let error as NSError {
+            print("Couldn't save object because of error: \(error)")
+        }
+        
+        tableView.reloadData()
+    }
+    
     func saveToCoreData() {
         let equation = "\(readableString(previousValue)) \(currentOperator!) \(readableString(currentValue)) = \(resultLabel.text!)"
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -215,14 +212,17 @@ class ViewController: UIViewController {
     }
     
     func readableString(_ value: Double?) -> String {
-        if value > Double(Int.max) {
+        guard let currentValue = value else {
+            return NSLocalizedString("Ran into an error", comment: "Ran into an error")
+        }
+        if currentValue > Double(Int.max) {
             return NSLocalizedString("Number too large", comment: "Number being too large")
         }
         
         if value!.truncatingRemainder(dividingBy: 1) == 0 {
-            return String(Int(value!))
+            return String(Int(currentValue))
         } else {
-            return String(value!)
+            return String(currentValue)
         }
     }
 }
