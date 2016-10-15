@@ -27,7 +27,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="380" id="DZw-oW-cTa"/>
                                         </constraints>
-                                        <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" barStyle="black" id="9pa-9x-3of">
                                             <rect key="frame" x="0.0" y="0.0" width="380" height="44"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
