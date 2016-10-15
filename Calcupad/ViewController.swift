@@ -69,6 +69,8 @@ class ViewController: UIViewController {
         
         let result = results[results.count - 1 - (indexPath as NSIndexPath).row]
         
+        cell!.backgroundColor = UIColor.darkText
+        cell!.textLabel!.textColor = UIColor.white
         cell!.textLabel!.text = result.value(forKey: equationAttributeName) as? String
         
         return cell!
