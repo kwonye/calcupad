@@ -1,0 +1,10 @@
+update_fastlane
+fastlane_version "1.106.2"
+default_platform :ios
+
+platform :ios do
+  desc "Runs all the tests"
+  lane :test do
+    scan(device: "#{"iPad Pro (9.7 inch)"} (#{10.1})")
+  end
+end
