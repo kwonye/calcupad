@@ -1,5 +1,4 @@
-sudo: required
-language: objective-c
+os: osx
 osx_image: xcode8.1
 
 before_install:
