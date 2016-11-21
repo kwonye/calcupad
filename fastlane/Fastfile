@@ -7,4 +7,10 @@ platform :ios do
   lane :test do
     scan(device: "#{"iPad Pro (9.7 inch)"} (#{10.1})")
   end
+
+  desc "Submit a new Beta Build to Apple TestFlight"
+  lane :beta do
+    gym
+    pilot
+  end
 end
