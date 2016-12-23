@@ -15,7 +15,7 @@ Runs all the tests
 ```
 fastlane ios beta
 ```
-Ships the app to testflight
+Submit a new Beta Build to Apple TestFlight
 
 ----
 
