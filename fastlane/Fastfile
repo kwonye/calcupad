@@ -7,4 +7,11 @@ platform :ios do
   lane :test do
     scan(device: "#{"iPad Pro (9.7 inch)"} (#{10.1})")
   end
+
+  desc "Ships the app to testflight"
+  lane :beta do
+    increment_build_number
+    gym
+    testflight
+  end
 end
