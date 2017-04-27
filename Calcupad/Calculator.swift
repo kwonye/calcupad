@@ -21,7 +21,7 @@ class Calculator: NSObject {
     var trailingZeroes: Int
     
     override init() {
-        setDefaultValues()
+        self.setDefaultValues()
     }
     
     func solveEquation() -> Double? {
