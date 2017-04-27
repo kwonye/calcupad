@@ -20,16 +20,10 @@ class ViewController: UIViewController {
     let calculationEntityName = "Calculation"
     let equationAttributeName = "equation"
     let cellIdentifier = "Cell"
-    let zero = "0"
-    let period = "."
     var results = [NSManagedObject]()
-    var previousValue: Double?
-    var currentValue: Double?
-    var currentOperator: String?
     var operationButtons: [CalculatorButton]?
     
     required init?(coder aDecoder: NSCoder) {
-        previousValue = nil
         calculator = Calculator()
         super.init(coder: aDecoder)
     }
@@ -77,96 +71,64 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onNumberTapped(_ sender: CalculatorButton) {
-        let inputText = sender.titleLabel!.text!
-        var currentText = resultLabel.text!
+        let inputNumber = Int(sender.titleLabel!.text!)
+        calculator.inputNumber(number: inputNumber!)
         
-        if currentText == zero || currentValue == nil {
-            currentText = inputText
-        } else {
-            currentText = currentText + inputText
-        }
-        
-        currentValue = Double(currentText)
-        resultLabel.text = currentText
+        resultLabel.text = calculator.printableValue()
     }
     
     @IBAction func onPeriodTapped() {
-        guard let currentText = resultLabel.text , !currentText.contains(period) else {
-            return
+        if !calculator.isDecimalInput {
+            calculator.isDecimalInput = true
+            resultLabel.text = calculator.printableValue()
         }
-        
-        if currentValue == nil {
-            resultLabel.text = zero + period
-        } else {
-            resultLabel.text?.append(period)
-        }
-        currentValue = Double(currentText)
     }
     
     @IBAction func onBackspaceTapped() {
-        let currentText = resultLabel.text!
+        calculator.delete()
         
-        if currentText.characters.count == 1 {
-            if currentText != zero {
-                resultLabel.text = zero
-            }
-        } else {
-            resultLabel.text = currentText.substring(to: currentText.characters.index(before: currentText.endIndex))
-        }
+        resultLabel.text = calculator.printableValue()
     }
     
     @IBAction func onNegativeTapped() {
-        guard var currentText = resultLabel.text , currentText != zero else {
-            return
+        if calculator.currentValue != 0 {
+            calculator.currentValue = calculator.currentValue! * -1.0
         }
         
-        if currentText.contains(calculator.minus) {
-            currentText.remove(at: currentText.startIndex)
-            resultLabel.text = currentText
-        } else {
-            resultLabel.text = calculator.minus + currentText
-        }
+        resultLabel.text = calculator.printableValue()
     }
     
     @IBAction func onOperationTapped(_ sender: CalculatorButton) {
-        if previousValue != nil {
-            previousValue = Double(resultLabel.text!)!
+        if calculator.previousValue != nil {
+            calculator.previousValue = calculator.currentValue!
             onEqualsTapped()
         }
-        currentOperator = sender.titleLabel!.text!
+        calculator.currentOperator = sender.titleLabel!.text!
         highlightOperationButton()
-        previousValue = Double(resultLabel.text!)!
-        currentValue = nil
+        calculator.previousValue = calculator.currentValue!
+        calculator.currentValue = nil
     }
     
     @IBAction func onClearTapped() {
-        resultLabel.text = zero
-        currentValue = nil
+        calculator.clear()
+        resultLabel.text = calculator.printableValue()
     }
     
     @IBAction func onAllClearTapped() {
-        onClearTapped()
-        previousValue = nil
-        currentOperator = nil
+        calculator.clearAll()
         highlightOperationButton()
+        resultLabel.text = calculator.printableValue()
     }
     
     @IBAction func onEqualsTapped() {
-        guard let solution = calculator.solveEquation(previousValue, secondValue: currentValue, currentOperator: currentOperator) else {
+        guard let solution = calculator.solveEquation(calculator.previousValue, secondValue: calculator.currentValue, currentOperator: calculator.currentOperator) else {
             return
         }
         
-        resultLabel.text = readableString(solution)
-        
-        if resultLabel.text == NSLocalizedString("Number too large", comment: "Number being too large") {
-            previousValue = nil
-        } else {
-            saveToCoreData()
-            previousValue = solution
-        }
-        
-        currentValue = nil
-        currentOperator = nil
+        saveToCoreData()
+        calculator.previousValue = solution
+        calculator.currentValue = nil
+        calculator.currentOperator = nil
         highlightOperationButton()
     }
     
@@ -186,7 +148,7 @@ class ViewController: UIViewController {
     }
     
     func saveToCoreData() {
-        let equation = "\(readableString(previousValue)) \(currentOperator!) \(readableString(currentValue)) = \(resultLabel.text!)"
+        let equation = "\(calculator.print(value: calculator.previousValue!)) \(calculator.currentOperator!) \(calculator.print(value: calculator.currentValue!)) = \(resultLabel.text!)"
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let entity = NSEntityDescription.entity(forEntityName: calculationEntityName, in: managedContext)
@@ -207,7 +169,7 @@ class ViewController: UIViewController {
     
     func highlightOperationButton() {
         for button in operationButtons! {
-            button.toggleHighlighted(button.titleLabel!.text == currentOperator)
+            button.toggleHighlighted(button.titleLabel!.text == calculator.currentOperator)
         }
     }
     
