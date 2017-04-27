@@ -18,7 +18,7 @@ class Calculator: NSObject {
     var currentOperator: String?
     var isDecimalInput: Bool
     var timesTenthDigitMultiple: Int
-    var trailingZeroes: Int
+    var trailingZeroesCount: Int
     
     override init() {
         self.setDefaultValues()
@@ -81,8 +81,8 @@ class Calculator: NSObject {
                 isDecimalInput = false
             } else {
                 timesTenthDigitMultiple -= 1
-                if trailingZeroes > 0 {
-                    trailingZeroes -= 1
+                if trailingZeroesCount > 0 {
+                    trailingZeroesCount -= 1
                 } else {
                     // remove trailing digits
                 }
@@ -106,7 +106,7 @@ class Calculator: NSObject {
                 printValue = String(Int(value))
             } else {
                 var zeroes = ""
-                for _ in 0...trailingZeroes {
+                for _ in 0...trailingZeroesCount {
                     zeroes = zeroes + "0"
                 }
                 printValue = String(value) + "." + zeroes
@@ -145,6 +145,6 @@ class Calculator: NSObject {
     private func setDefaultValues() {
         isDecimalInput = false
         timesTenthDigitMultiple = 0
-        trailingZeroes = 0
+        trailingZeroesCount = 0
     }
 }
