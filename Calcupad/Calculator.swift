@@ -18,7 +18,7 @@ class Calculator: NSObject {
     var currentOperator: String?
     var isDecimalInput = false
     var timesTenthDigitMultiple = 0
-    var trailingZeroesCount= 0
+    var trailingZeroesCount = 0
     
     func solveEquation() -> Double? {
         return solveEquation(previousValue, secondValue: currentValue, currentOperator: currentOperator)
