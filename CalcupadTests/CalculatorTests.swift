@@ -43,5 +43,16 @@ class CalculatorTests: XCTestCase {
     func testSolveEquationOneMinusTwoReturnsNegativeOne() {
         XCTAssertEqual(testCalculator.solveEquation(1, secondValue: 2, currentOperator: testCalculator.minus), -1)
     }
+    
+    func testIsValueIntNilReturnsFalse() {
+        XCTAssertFalse(testCalculator.isValueInt(value: nil))
+    }
+    
+    func testIsValueIntDoubleReturnsFalse() {
+        XCTAssertFalse(testCalculator.isValueInt(value: 1.1))
+    }
+    
+    func testIsValueIntIntReturnsTrue() {
+        XCTAssertTrue(testCalculator.isValueInt(value: 1.0))
     }
 }
