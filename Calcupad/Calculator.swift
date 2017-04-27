@@ -16,13 +16,9 @@ class Calculator: NSObject {
     var previousValue: Double?
     var currentValue: Double?
     var currentOperator: String?
-    var isDecimalInput: Bool
-    var timesTenthDigitMultiple: Int
-    var trailingZeroesCount: Int
-    
-    override init() {
-        self.setDefaultValues()
-    }
+    var isDecimalInput = false
+    var timesTenthDigitMultiple = 0
+    var trailingZeroesCount= 0
     
     func solveEquation() -> Double? {
         return solveEquation(previousValue, secondValue: currentValue, currentOperator: currentOperator)
