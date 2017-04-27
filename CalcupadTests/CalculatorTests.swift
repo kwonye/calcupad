@@ -18,7 +18,6 @@ class CalculatorTests: XCTestCase {
     }
     
     override func tearDown() {
-        testCalculator = nil
         super.tearDown()
     }
     
