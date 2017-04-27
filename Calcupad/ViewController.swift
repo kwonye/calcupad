@@ -121,10 +121,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onEqualsTapped() {
-        guard let solution = calculator.solveEquation(calculator.previousValue, secondValue: calculator.currentValue, currentOperator: calculator.currentOperator) else {
+        guard let solution = calculator.solveEquation() else {
             return
         }
+        calculator.currentValue = solution
         
+        resultLabel.text = calculator.printableValue()
         saveToCoreData()
         calculator.previousValue = solution
         calculator.currentValue = nil
@@ -148,7 +150,7 @@ class ViewController: UIViewController {
     }
     
     func saveToCoreData() {
-        let equation = "\(calculator.print(value: calculator.previousValue!)) \(calculator.currentOperator!) \(calculator.print(value: calculator.currentValue!)) = \(resultLabel.text!)"
+        let equation = "\(readableString(calculator.previousValue)) \(calculator.currentOperator!) \(readableString(calculator.currentValue)) = \(resultLabel.text!)"
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let entity = NSEntityDescription.entity(forEntityName: calculationEntityName, in: managedContext)
