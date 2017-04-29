@@ -10,7 +10,7 @@ import UIKit
 
 class Calculator: NSObject {
     let plus = "+"
-    let minus = "−"
+    let minus = "-"
     let multiply = "×"
     let divide = "÷"
     
