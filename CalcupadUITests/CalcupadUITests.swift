@@ -28,7 +28,7 @@ class CalcupadUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testAddition() {
         let app = XCUIApplication()
         app.buttons["3"].tap()
         app.buttons["÷"].tap()
@@ -37,5 +37,4 @@ class CalcupadUITests: XCTestCase {
         
         XCTAssertEqual(app.staticTexts.element(matching: .any, identifier: "Results").label, "0.5")
     }
-    
 }
