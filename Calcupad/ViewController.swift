@@ -171,7 +171,7 @@ class ViewController: UIViewController {
     }
     
     func saveToCoreData() {
-        let equation = "\(readableString(previousValue)) \(currentOperator!) \(readableString(currentValue)) = \(resultLabel.text!)"
+        let equation = "\(readableString(calculator.previousValue)) \(calculator.currentOperator!) \(readableString(calculator.currentValue)) = \(readableString(calculator.solution))"
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let entity = NSEntityDescription.entity(forEntityName: calculationEntityName, in: managedContext)
