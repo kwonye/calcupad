@@ -131,7 +131,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onAllClearTapped(_ sender: CalculatorButton) {
-        onClearTapped()
+        calculator.currentOperator = nil
+        onClearTapped(sender)
     }
     
     @IBAction func onEqualsTapped(_ sender: CalculatorButton) {
