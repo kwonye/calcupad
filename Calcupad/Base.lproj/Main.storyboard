@@ -137,7 +137,7 @@
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onAllClearTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="zpN-go-rFb"/>
+                                                                    <action selector="onAllClearTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l5g-aB-fYZ"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -197,7 +197,7 @@
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onClearTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="40S-OV-u4i"/>
+                                                                    <action selector="onClearTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WOg-9U-4vQ"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -257,7 +257,7 @@
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onBackspaceTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="6qC-0u-aK6"/>
+                                                                    <action selector="onBackspaceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qCc-NV-Nzm"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -273,7 +273,7 @@
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onNegativeTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Kw-MV-FrB"/>
+                                                                    <action selector="onNegativeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DZc-MQ-79K"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZi-Ch-znO" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
@@ -295,7 +295,7 @@
                                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onPeriodTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="H7E-9d-2JR"/>
+                                                                    <action selector="onPeriodTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7yJ-O5-tEp"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9c-WC-MUB" customClass="CalculatorButton" customModule="Calcupad" customModuleProvider="target">
@@ -317,7 +317,7 @@
                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="onEqualsTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="LJH-sA-Dd0"/>
+                                                                    <action selector="onEqualsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RA6-VL-evX"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>

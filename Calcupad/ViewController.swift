@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func onPeriodTapped() {
+    @IBAction func onPeriodTapped(_ sender: CalculatorButton) {
         guard let currentText = resultLabel.text , !currentText.contains(period) else {
             return
         }
@@ -95,7 +95,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func onBackspaceTapped() {
+    @IBAction func onBackspaceTapped(_ sender: CalculatorButton) {
         let currentText = resultLabel.text!
         
         if currentText.characters.count == 1 {
@@ -107,7 +107,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func onNegativeTapped() {
+    @IBAction func onNegativeTapped(_ sender: CalculatorButton) {
         guard var currentText = resultLabel.text , currentText != zero else {
             return
         }
@@ -126,15 +126,16 @@ class ViewController: UIViewController {
         highlightOperationButton()
     }
     
-    @IBAction func onClearTapped() {
+    @IBAction func onClearTapped(_ sender: CalculatorButton) {
         resultLabel.text = zero
     }
     
-    @IBAction func onAllClearTapped() {
+    @IBAction func onAllClearTapped(_ sender: CalculatorButton) {
         onClearTapped()
     }
     
-    @IBAction func onEqualsTapped() {
+    @IBAction func onEqualsTapped(_ sender: CalculatorButton) {
+        calculator.previousValue = calculator.currentValue
         calculator.currentValue = Double(resultLabel!.text!)
         
         guard let solution = calculator.solveEquation() else {
