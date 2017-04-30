@@ -34,7 +34,17 @@ xcode-select --install
 ```
 fastlane ios test
 ```
-Runs all the tests
+Runs both unit and UI tests
+### ios unit_test
+```
+fastlane ios unit_test
+```
+Runs all unit tests
+### ios ui_test
+```
+fastlane ios ui_test
+```
+Runs all UI tests
 
 ----
 
