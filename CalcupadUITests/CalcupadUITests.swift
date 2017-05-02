@@ -9,32 +9,44 @@
 import XCTest
 
 class CalcupadUITests: XCTestCase {
-        
+    var resultLabelValue = ""
+    var app = XCUIApplication()
+    
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
     func testAddition() {
-        let app = XCUIApplication()
         app.buttons["3"].tap()
-        app.buttons["÷"].tap()
+        app.buttons["+"].tap()
         app.buttons["6"].tap()
         app.buttons["="].tap()
         
-        XCTAssertEqual(app.staticTexts.element(matching: .any, identifier: "Results").label, "0.5")
+        XCTAssertEqual(resultLabelValue, "9")
+    }
+    
+    func testMultiply() {
+        app.buttons["2"].tap()
+        app.buttons["×"].tap()
+        app.buttons["3"].tap()
+        app.buttons["="].tap()
+        
+        XCTAssertEqual(resultLabelValue, "6")
+    }
+    
+    func testSelfEquals() {
+        app.buttons["2"].tap()
+        app.buttons["×"].tap()
+        app.buttons["="].tap()
+        
+        XCTAssertEqual(resultLabelValue, "4")
     }
 }
