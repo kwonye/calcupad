@@ -119,8 +119,8 @@
 		BE05B8D41D4D266600071A84 /* CalcupadTests */ = {
 			isa = PBXGroup;
 			children = (
-				BE05B8D71D4D266600071A84 /* Info.plist */,
 				BEA62CC81D7947B50020CCF5 /* CalculatorTests.swift */,
+				BE05B8D71D4D266600071A84 /* Info.plist */,
 			);
 			path = CalcupadTests;
 			sourceTree = "<group>";
