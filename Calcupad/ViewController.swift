@@ -81,6 +81,8 @@ class ViewController: UIViewController {
         } else {
             resultLabel.text = currentText.appending(inputText)
         }
+        
+        calculator.currentValue = Double(resultLabel!.text!)
     }
     
     @IBAction func onPeriodTapped(_ sender: CalculatorButton) {
@@ -93,6 +95,8 @@ class ViewController: UIViewController {
         } else {
             resultLabel.text?.append(period)
         }
+        
+        calculator.currentValue = Double(resultLabel!.text!)
     }
     
     @IBAction func onBackspaceTapped(_ sender: CalculatorButton) {
@@ -105,6 +109,8 @@ class ViewController: UIViewController {
         } else {
             resultLabel.text = currentText.substring(to: currentText.characters.index(before: currentText.endIndex))
         }
+        
+        calculator.currentValue = Double(resultLabel!.text!)
     }
     
     @IBAction func onNegativeTapped(_ sender: CalculatorButton) {
@@ -118,16 +124,20 @@ class ViewController: UIViewController {
         } else {
             resultLabel.text = calculator.minus + currentText
         }
+        
+        calculator.currentValue = Double(resultLabel!.text!)
     }
     
     @IBAction func onOperationTapped(_ sender: CalculatorButton) {
-        calculator.previousValue = Double(resultLabel!.text!)
+        calculator.previousValue = calculator.currentValue
+        calculator.currentValue = nil
         calculator.currentOperator = sender.titleLabel!.text!
         highlightOperationButton()
     }
     
     @IBAction func onClearTapped(_ sender: CalculatorButton) {
         resultLabel.text = zero
+        calculator.currentValue = nil
     }
     
     @IBAction func onAllClearTapped(_ sender: CalculatorButton) {
@@ -136,9 +146,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onEqualsTapped(_ sender: CalculatorButton) {
-        calculator.previousValue = calculator.currentValue
-        calculator.currentValue = Double(resultLabel!.text!)
-        
         guard let solution = calculator.solveEquation() else {
             return
         }
