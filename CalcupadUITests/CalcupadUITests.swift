@@ -9,7 +9,6 @@
 import XCTest
 
 class CalcupadUITests: XCTestCase {
-    var resultLabelValue = ""
     var app = XCUIApplication()
     
     override func setUp() {
@@ -17,7 +16,6 @@ class CalcupadUITests: XCTestCase {
         continueAfterFailure = false
         XCUIApplication().launch()
         app = XCUIApplication()
-        resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
     }
     
     override func tearDown() {
@@ -29,6 +27,7 @@ class CalcupadUITests: XCTestCase {
         app.buttons["+"].tap()
         app.buttons["6"].tap()
         app.buttons["="].tap()
+        let resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
         
         XCTAssertEqual(resultLabelValue, "9")
     }
@@ -38,15 +37,8 @@ class CalcupadUITests: XCTestCase {
         app.buttons["×"].tap()
         app.buttons["3"].tap()
         app.buttons["="].tap()
+        let resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
         
         XCTAssertEqual(resultLabelValue, "6")
-    }
-    
-    func testSelfEquals() {
-        app.buttons["2"].tap()
-        app.buttons["×"].tap()
-        app.buttons["="].tap()
-        
-        XCTAssertEqual(resultLabelValue, "4")
     }
 }
