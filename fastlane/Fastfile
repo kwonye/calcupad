@@ -11,11 +11,11 @@ platform :ios do
 
   desc "Runs all unit tests"
   lane :unit_test do
-    scan(device: "#{"iPad Pro (9.7 inch)"}", scheme: "Calcupad")
+    scan(device: "#{"iPad Pro (10.5-inch)"}", scheme: "Calcupad")
   end
 
   desc "Runs all UI tests"
   lane :ui_test do
-    scan(device: "#{"iPad Pro (9.7 inch)"}", scheme: "CalcupadUITests")
+    scan(device: "#{"iPad Pro (10.5-inch)"}", scheme: "CalcupadUITests")
   end
 end
