@@ -1,10 +1,20 @@
-update_fastlane
 fastlane_version "1.106.2"
 default_platform :ios
 
 platform :ios do
-  desc "Runs all the tests"
+  desc "Runs both unit and UI tests"
   lane :test do
-    scan(device: "#{"iPad Pro (9.7 inch)"}")
+    unit_test
+    ui_test
+  end
+
+  desc "Runs all unit tests"
+  lane :unit_test do
+    scan(device: "#{"iPad Pro (10.5-inch)"}", scheme: "Calcupad")
+  end
+
+  desc "Runs all UI tests"
+  lane :ui_test do
+    scan(device: "#{"iPad Pro (10.5-inch)"}", scheme: "CalcupadUITests")
   end
 end
