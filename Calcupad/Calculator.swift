@@ -10,9 +10,19 @@ import UIKit
 
 class Calculator: NSObject {
     let plus = "+"
-    let minus = "−"
+    let minus = "-"
     let multiply = "×"
     let divide = "÷"
+    var previousValue: Double?
+    var currentValue: Double?
+    var currentOperator: String?
+    var solution: Double?
+    
+    func solveEquation() -> Double? {
+        solution = solveEquation(previousValue, secondValue: currentValue, currentOperator: currentOperator)
+        
+        return solution
+    }
     
     func solveEquation(_ firstValue: Double?, secondValue: Double?, currentOperator: String?) -> Double? {
         guard let firstValue = firstValue, let secondValue = secondValue, let currentOperator = currentOperator else {
