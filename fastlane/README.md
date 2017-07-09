@@ -30,6 +30,11 @@ xcode-select --install
 
 # Available Actions
 ## iOS
+### ios testflight
+```
+fastlane ios testflight
+```
+Release to Testflight
 ### ios test
 ```
 fastlane ios test
