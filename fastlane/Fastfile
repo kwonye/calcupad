@@ -4,8 +4,7 @@ default_platform :ios
 platform :ios do
   desc "Release to Testflight"
   lane :deploy_appstore do
-    unit_test
-    increment_build_number
+    test_increment_build
     increment_version_number(bump_type: "minor")
     commit_version_bump
     cert
@@ -13,11 +12,17 @@ platform :ios do
   end
 
   lane :deploy_testflight do
-    unit_test
-    increment_build_number
     commit_version_bump
+    test_increment_build
     cert
     gym(scheme: "Calcupad")
+    pilot upload
+  end
+
+  desc "Tests and increments the build"
+  lane :test_increment_build do
+    unit_test
+    increment_build_number
   end
 
   desc "Runs both unit and UI tests"
