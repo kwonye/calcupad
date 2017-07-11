@@ -2,3 +2,6 @@ os: osx
 osx_image: xcode8.3
 
 script: ./fastlane/travis.sh
+
+before_install:
+  - sudo gem install fastlane
