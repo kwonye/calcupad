@@ -40,6 +40,11 @@ Release to Testflight
 fastlane ios deploy_testflight
 ```
 
+### ios test_increment_build
+```
+fastlane ios test_increment_build
+```
+Tests and increments the build
 ### ios test
 ```
 fastlane ios test

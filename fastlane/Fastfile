@@ -12,11 +12,11 @@ platform :ios do
   end
 
   lane :deploy_testflight do
-    commit_version_bump
     test_increment_build
+    commit_version_bump
     cert
     gym(scheme: "Calcupad")
-    pilot upload
+    pilot
   end
 
   desc "Tests and increments the build"
