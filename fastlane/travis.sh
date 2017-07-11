@@ -6,7 +6,7 @@ elif [ "$TRAVIS_BRANCH" = "master" ]; then
   fastlane appstore
 else
   # fastlane test
-  fastlane testflight
+  fastlane deploy_testflight
 fi
 
 if [[ "$TRAVIS_BRANCH" == "develop" ]]; then
