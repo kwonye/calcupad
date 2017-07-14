@@ -7,14 +7,12 @@ platform :ios do
     test_increment_build
     increment_version_number(bump_type: "minor")
     commit_version_bump
-    cert
     gym(scheme: "Calcupad")
   end
 
   lane :deploy_testflight do
     test_increment_build
     commit_version_bump
-    cert
     gym(scheme: "Calcupad")
     pilot
   end
