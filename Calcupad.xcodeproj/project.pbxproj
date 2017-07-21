@@ -13,7 +13,6 @@
 		BE05B8C61D4D266600071A84 /* Calcupad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE05B8C41D4D266600071A84 /* Calcupad.xcdatamodeld */; };
 		BE05B8C81D4D266600071A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE05B8C71D4D266600071A84 /* Assets.xcassets */; };
 		BE05B8CB1D4D266600071A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE05B8C91D4D266600071A84 /* LaunchScreen.storyboard */; };
-		BE05B8D61D4D266600071A84 /* CalcupadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE05B8D51D4D266600071A84 /* CalcupadTests.swift */; };
 		BE05B8E11D4D266600071A84 /* CalcupadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE05B8E01D4D266600071A84 /* CalcupadUITests.swift */; };
 		BE3C70651D5C16B5003C2E41 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C70641D5C16B5003C2E41 /* CalculatorButton.swift */; };
 		BEA62CC71D79447C0020CCF5 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA62CC61D79447C0020CCF5 /* Calculator.swift */; };
@@ -47,7 +46,6 @@
 		BE05B8CA1D4D266600071A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE05B8CC1D4D266600071A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE05B8D11D4D266600071A84 /* CalcupadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcupadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE05B8D51D4D266600071A84 /* CalcupadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcupadTests.swift; sourceTree = "<group>"; };
 		BE05B8D71D4D266600071A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE05B8DC1D4D266600071A84 /* CalcupadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcupadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE05B8E01D4D266600071A84 /* CalcupadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcupadUITests.swift; sourceTree = "<group>"; };
@@ -121,9 +119,8 @@
 		BE05B8D41D4D266600071A84 /* CalcupadTests */ = {
 			isa = PBXGroup;
 			children = (
-				BE05B8D51D4D266600071A84 /* CalcupadTests.swift */,
-				BE05B8D71D4D266600071A84 /* Info.plist */,
 				BEA62CC81D7947B50020CCF5 /* CalculatorTests.swift */,
+				BE05B8D71D4D266600071A84 /* Info.plist */,
 			);
 			path = CalcupadTests;
 			sourceTree = "<group>";
@@ -286,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE05B8D61D4D266600071A84 /* CalcupadTests.swift in Sources */,
 				BEA62CC91D7947B50020CCF5 /* CalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

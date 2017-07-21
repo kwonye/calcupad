@@ -1,3 +1,4 @@
-language: objective-c
-osx_image: xcode8
-script: xcodebuild -project Calcupad.xcodeproj -scheme Calcupad -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPad Pro (12.9 inch)' build test
+os: osx
+osx_image: xcode8.3
+
+script: ./fastlane/travis.sh
