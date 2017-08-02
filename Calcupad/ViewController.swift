@@ -129,7 +129,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onOperationTapped(_ sender: CalculatorButton) {
-        calculator.previousValue = calculator.currentValue
+        if calculator.currentValue == nil {
+            calculator.previousValue = calculator.solution
+        } else {
+            calculator.previousValue = calculator.currentValue
+        }
         calculator.currentValue = nil
         calculator.currentOperator = sender.titleLabel!.text!
         highlightOperationButton()
