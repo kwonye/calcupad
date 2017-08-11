@@ -134,7 +134,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onOperationTapped(_ sender: CalculatorButton) {
-        if calculator.solution != nil {
+        if calculator.solution != nil && lastButtonPressed.isEqualButton() {
             calculator.previousValue = calculator.solution
         } else {
             calculator.previousValue = calculator.currentValue
@@ -158,6 +158,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onEqualsTapped(_ sender: CalculatorButton) {
+        if (operationButtons?.contains(lastButtonPressed))! {
+            calculator.currentValue = calculator.previousValue
+        }
+        
         guard let solution = calculator.solveEquation() else {
             return
         }
