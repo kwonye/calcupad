@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         let inputText = sender.titleLabel!.text!
         let currentText = resultLabel.text!
         
-        if currentText == zero || calculator.currentValue == nil {
+        if currentText == zero || calculator.currentValue == nil || calculator.solution != nil {
             resultLabel.text = inputText
         } else {
             resultLabel.text = currentText.appending(inputText)
@@ -129,7 +129,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onOperationTapped(_ sender: CalculatorButton) {
-        if calculator.currentValue == nil {
+        if calculator.solution != nil {
             calculator.previousValue = calculator.solution
         } else {
             calculator.previousValue = calculator.currentValue
@@ -163,8 +163,6 @@ class ViewController: UIViewController {
             calculator.previousValue = solution
         }
         
-        calculator.currentValue = nil
-        calculator.currentOperator = nil
         clearOperationButtonHighlight()
     }
     
