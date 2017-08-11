@@ -54,4 +54,15 @@ class CalcupadUITests: XCTestCase {
         
         XCTAssertEqual(resultLabelValue, "12")
     }
+    
+    func testContinuationOfEquationAfterSolutionWithRepeatNumber() {
+        app.buttons["2"].tap()
+        app.buttons["×"].tap()
+        app.buttons["3"].tap()
+        app.buttons["="].tap()
+        app.buttons["="].tap()
+        let resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
+        
+        XCTAssertEqual(resultLabelValue, "18")
+    }
 }
