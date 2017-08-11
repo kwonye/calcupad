@@ -165,7 +165,7 @@ class ViewController: UIViewController {
         
         calculator.currentValue = nil
         calculator.currentOperator = nil
-        highlightOperationButton()
+        clearOperationButtonHighlight()
     }
     
     @IBAction func onClearButtonTapped(_ sender: UIBarButtonItem) {
@@ -201,6 +201,12 @@ class ViewController: UIViewController {
         }
         
         tableView.reloadData()
+    }
+    
+    func clearOperationButtonHighlight() {
+        for button in operationButtons! {
+            button.toggleHighlighted(false)
+        }
     }
     
     func highlightOperationButton() {
