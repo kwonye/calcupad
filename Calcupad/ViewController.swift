@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     let period = "."
     var results = [NSManagedObject]()
     var operationButtons: [CalculatorButton]?
+    var lastButtonPressed = CalculatorButton()
     
     required init?(coder aDecoder: NSCoder) {
         calculator = Calculator()
@@ -83,6 +84,7 @@ class ViewController: UIViewController {
         }
         
         calculator.currentValue = Double(resultLabel!.text!)
+        lastButtonPressed = sender
     }
     
     @IBAction func onPeriodTapped(_ sender: CalculatorButton) {
@@ -97,6 +99,7 @@ class ViewController: UIViewController {
         }
         
         calculator.currentValue = Double(resultLabel!.text!)
+        lastButtonPressed = sender
     }
     
     @IBAction func onBackspaceTapped(_ sender: CalculatorButton) {
@@ -111,6 +114,7 @@ class ViewController: UIViewController {
         }
         
         calculator.currentValue = Double(resultLabel!.text!)
+        lastButtonPressed = sender
     }
     
     @IBAction func onNegativeTapped(_ sender: CalculatorButton) {
@@ -126,6 +130,7 @@ class ViewController: UIViewController {
         }
         
         calculator.currentValue = Double(resultLabel!.text!)
+        lastButtonPressed = sender
     }
     
     @IBAction func onOperationTapped(_ sender: CalculatorButton) {
@@ -137,16 +142,19 @@ class ViewController: UIViewController {
         calculator.currentValue = nil
         calculator.currentOperator = sender.titleLabel!.text!
         highlightOperationButton()
+        lastButtonPressed = sender
     }
     
     @IBAction func onClearTapped(_ sender: CalculatorButton) {
         resultLabel.text = zero
         calculator.currentValue = nil
+        lastButtonPressed = sender
     }
     
     @IBAction func onAllClearTapped(_ sender: CalculatorButton) {
         calculator.currentOperator = nil
         onClearTapped(sender)
+        lastButtonPressed = sender
     }
     
     @IBAction func onEqualsTapped(_ sender: CalculatorButton) {
@@ -164,6 +172,7 @@ class ViewController: UIViewController {
         }
         
         clearOperationButtonHighlight()
+        lastButtonPressed = sender
     }
     
     @IBAction func onClearButtonTapped(_ sender: UIBarButtonItem) {
