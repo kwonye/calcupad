@@ -65,4 +65,16 @@ class CalcupadUITests: XCTestCase {
         
         XCTAssertEqual(resultLabelValue, "18")
     }
+    
+    func testSolutionMultipliesItselfAfterSolution() {
+        app.buttons["2"].tap()
+        app.buttons["×"].tap()
+        app.buttons["3"].tap()
+        app.buttons["="].tap()
+        app.buttons["×"].tap()
+        app.buttons["="].tap()
+        let resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
+        
+        XCTAssertEqual(resultLabelValue, "36")
+    }
 }
