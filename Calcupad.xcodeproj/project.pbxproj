@@ -203,18 +203,18 @@
 					BE05B8B91D4D266600071A84 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = SU5JDRYRBL;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 					};
 					BE05B8D01D4D266600071A84 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = SU5JDRYRBL;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						TestTargetID = BE05B8B91D4D266600071A84;
 					};
 					BE05B8DB1D4D266600071A84 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = SU5JDRYRBL;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						TestTargetID = BE05B8B91D4D266600071A84;
 					};
 				};
@@ -430,7 +430,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.calcupad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -444,7 +445,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.calcupad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -457,7 +459,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.CalcupadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calcupad.app/Calcupad";
 			};
 			name = Debug;
@@ -471,7 +474,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.CalcupadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calcupad.app/Calcupad";
 			};
 			name = Release;
@@ -485,7 +489,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.CalcupadUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Calcupad;
 			};
 			name = Debug;
@@ -499,7 +504,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.willkwon.CalcupadUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Calcupad;
 			};
 			name = Release;
