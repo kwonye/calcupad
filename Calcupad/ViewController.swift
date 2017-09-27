@@ -107,7 +107,7 @@ class ViewController: UIViewController {
                 resultLabel.text = zero
             }
         } else {
-            resultLabel.text = currentText.substring(to: currentText.characters.index(before: currentText.endIndex))
+            resultLabel.text = String(currentText[..<currentText.characters.index(before: currentText.endIndex)])
         }
         
         calculator.currentValue = Double(resultLabel!.text!)
