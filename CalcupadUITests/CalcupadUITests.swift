@@ -48,7 +48,7 @@ class CalcupadUITests: XCTestCase {
             XCUIApplication().buttons[String(describing: button)].tap()
         }
         
-        let result = app.staticTexts.element(matching: .any, identifier: "Results").label
+        let result = XCUIApplication().staticTexts.element(matching: .any, identifier: "Results").label
         
         XCTAssertEqual(result, String(describing: expected))
     }
