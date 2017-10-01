@@ -9,17 +9,10 @@
 import XCTest
 
 class CalcupadUITests: XCTestCase {
-    var app = XCUIApplication()
-    
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
         XCUIApplication().launch()
-        app = XCUIApplication()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
     }
     
     func testAddition() {
@@ -52,7 +45,7 @@ class CalcupadUITests: XCTestCase {
     
     func pressButtons(buttons: [Any], expected: Any) {
         for button in buttons {
-            app.buttons[String(describing: button)].tap()
+            XCUIApplication().buttons[String(describing: button)].tap()
         }
         
         let result = app.staticTexts.element(matching: .any, identifier: "Results").label
