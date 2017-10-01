@@ -86,4 +86,12 @@ class CalcupadUITests: XCTestCase {
         
         XCTAssertEqual(resultLabelValue, "6")
     }
+    
+    func pressButtons(buttons: [Any]) -> String {
+        for button in buttons {
+            app.buttons[String(describing: button)].tap()
+        }
+        
+        return app.staticTexts.element(matching: .any, identifier: "Results").label
+    }
 }
