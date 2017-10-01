@@ -30,6 +30,10 @@ class CalcupadUITests: XCTestCase {
         pressButtons(buttons: [2, "×", 3, "="], expected: 6)
     }
     
+    func testSubtraction() {
+        pressButtons(buttons: [1, "-", 4, "="], expected: -3)
+    }
+    
     func testContinuationOfEquationAfterSolution() {
         pressButtons(buttons: [2, "×", 3, "=", "×", 2, "="], expected: 12)
     }
