@@ -23,68 +23,27 @@ class CalcupadUITests: XCTestCase {
     }
     
     func testAddition() {
-        app.buttons["3"].tap()
-        app.buttons["+"].tap()
-        app.buttons["6"].tap()
-        app.buttons["="].tap()
-        let resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
-        
-        XCTAssertEqual(resultLabelValue, "9")
+        pressButtons(buttons: [3, "+", 6, "="], expected: 9)
     }
     
     func testMultiply() {
-        app.buttons["2"].tap()
-        app.buttons["×"].tap()
-        app.buttons["3"].tap()
-        app.buttons["="].tap()
-        let resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
-        
-        XCTAssertEqual(resultLabelValue, "6")
+        pressButtons(buttons: [2, "×", 3, "="], expected: 6)
     }
     
     func testContinuationOfEquationAfterSolution() {
-        app.buttons["2"].tap()
-        app.buttons["×"].tap()
-        app.buttons["3"].tap()
-        app.buttons["="].tap()
-        app.buttons["×"].tap()
-        app.buttons["2"].tap()
-        app.buttons["="].tap()
-        let resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
-        
-        XCTAssertEqual(resultLabelValue, "12")
+        pressButtons(buttons: [2, "×", 3, "=", "×", 2, "="], expected: 12)
     }
     
     func testContinuationOfEquationAfterSolutionWithRepeatNumber() {
-        app.buttons["2"].tap()
-        app.buttons["×"].tap()
-        app.buttons["3"].tap()
-        app.buttons["="].tap()
-        app.buttons["="].tap()
-        let resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
-        
-        XCTAssertEqual(resultLabelValue, "18")
+        pressButtons(buttons: [2, "×", 3, "=", "="], expected: 18)
     }
     
     func testSolutionMultipliesItselfAfterSolution() {
-        app.buttons["2"].tap()
-        app.buttons["×"].tap()
-        app.buttons["3"].tap()
-        app.buttons["="].tap()
-        app.buttons["×"].tap()
-        app.buttons["="].tap()
-        let resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
-        
-        XCTAssertEqual(resultLabelValue, "36")
+        pressButtons(buttons: [2, "×", 3, "=", "×", "="], expected: 36)
     }
     
     func testAdditionByItself() {
-        app.buttons["3"].tap()
-        app.buttons["+"].tap()
-        app.buttons["="].tap()
-        let resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
-        
-        XCTAssertEqual(resultLabelValue, "6")
+        pressButtons(buttons: [3, "+", "="], expected: 6)
     }
     
     func pressButtons(buttons: [Any], expected: Any) {
