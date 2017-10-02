@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     let period = "."
     var results = [NSManagedObject]()
     var operationButtons: [CalculatorButton]?
+    var lastButtonPressed = CalculatorButton()
     
     required init?(coder aDecoder: NSCoder) {
         calculator = Calculator()
@@ -76,13 +77,14 @@ class ViewController: UIViewController {
         let inputText = sender.titleLabel!.text!
         let currentText = resultLabel.text!
         
-        if currentText == zero || calculator.currentValue == nil {
+        if currentText == zero || calculator.currentValue == nil || calculator.solution != nil {
             resultLabel.text = inputText
         } else {
             resultLabel.text = currentText.appending(inputText)
         }
         
         calculator.currentValue = Double(resultLabel!.text!)
+        lastButtonPressed = sender
     }
     
     @IBAction func onPeriodTapped(_ sender: CalculatorButton) {
@@ -97,6 +99,7 @@ class ViewController: UIViewController {
         }
         
         calculator.currentValue = Double(resultLabel!.text!)
+        lastButtonPressed = sender
     }
     
     @IBAction func onBackspaceTapped(_ sender: CalculatorButton) {
@@ -111,6 +114,7 @@ class ViewController: UIViewController {
         }
         
         calculator.currentValue = Double(resultLabel!.text!)
+        lastButtonPressed = sender
     }
     
     @IBAction func onNegativeTapped(_ sender: CalculatorButton) {
@@ -126,26 +130,38 @@ class ViewController: UIViewController {
         }
         
         calculator.currentValue = Double(resultLabel!.text!)
+        lastButtonPressed = sender
     }
     
     @IBAction func onOperationTapped(_ sender: CalculatorButton) {
-        calculator.previousValue = calculator.currentValue
+        if calculator.solution != nil && lastButtonPressed.isEqualButton() {
+            calculator.previousValue = calculator.solution
+        } else {
+            calculator.previousValue = calculator.currentValue
+        }
         calculator.currentValue = nil
         calculator.currentOperator = sender.titleLabel!.text!
         highlightOperationButton()
+        lastButtonPressed = sender
     }
     
     @IBAction func onClearTapped(_ sender: CalculatorButton) {
         resultLabel.text = zero
         calculator.currentValue = nil
+        lastButtonPressed = sender
     }
     
     @IBAction func onAllClearTapped(_ sender: CalculatorButton) {
         calculator.currentOperator = nil
         onClearTapped(sender)
+        lastButtonPressed = sender
     }
     
     @IBAction func onEqualsTapped(_ sender: CalculatorButton) {
+        if (operationButtons?.contains(lastButtonPressed))! {
+            calculator.currentValue = calculator.previousValue
+        }
+        
         guard let solution = calculator.solveEquation() else {
             return
         }
@@ -159,9 +175,8 @@ class ViewController: UIViewController {
             calculator.previousValue = solution
         }
         
-        calculator.currentValue = nil
-        calculator.currentOperator = nil
-        highlightOperationButton()
+        clearOperationButtonHighlight()
+        lastButtonPressed = sender
     }
     
     @IBAction func onClearButtonTapped(_ sender: UIBarButtonItem) {
@@ -197,6 +212,12 @@ class ViewController: UIViewController {
         }
         
         tableView.reloadData()
+    }
+    
+    func clearOperationButtonHighlight() {
+        for button in operationButtons! {
+            button.toggleHighlighted(false)
+        }
     }
     
     func highlightOperationButton() {

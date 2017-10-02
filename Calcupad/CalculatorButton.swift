@@ -22,4 +22,8 @@ class CalculatorButton: UIButton {
             layer.borderWidth = 0.5
         }
     }
+    
+    func isEqualButton() -> Bool {
+        return titleLabel?.text == "="
+    }
 }

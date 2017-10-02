@@ -9,36 +9,51 @@
 import XCTest
 
 class CalcupadUITests: XCTestCase {
-    var app = XCUIApplication()
-    
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
         XCUIApplication().launch()
-        app = XCUIApplication()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
     }
     
     func testAddition() {
-        app.buttons["3"].tap()
-        app.buttons["+"].tap()
-        app.buttons["6"].tap()
-        app.buttons["="].tap()
-        let resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
-        
-        XCTAssertEqual(resultLabelValue, "9")
+        pressButtons(buttons: [3, "+", 6, "="], expected: 9)
     }
     
     func testMultiply() {
-        app.buttons["2"].tap()
-        app.buttons["×"].tap()
-        app.buttons["3"].tap()
-        app.buttons["="].tap()
-        let resultLabelValue = app.staticTexts.element(matching: .any, identifier: "Results").label
+        pressButtons(buttons: [2, "×", 3, "="], expected: 6)
+    }
+    
+    func testSubtraction() {
+        pressButtons(buttons: [1, "-", 4, "="], expected: -3)
+    }
+    
+    func testDivision() {
+        pressButtons(buttons: [1, "÷", 2, "="], expected: 0.5)
+    }
+    
+    func testContinuationOfEquationAfterSolution() {
+        pressButtons(buttons: [2, "×", 3, "=", "×", 2, "="], expected: 12)
+    }
+    
+    func testContinuationOfEquationAfterSolutionWithRepeatNumber() {
+        pressButtons(buttons: [2, "×", 3, "=", "="], expected: 18)
+    }
+    
+    func testSolutionMultipliesItselfAfterSolution() {
+        pressButtons(buttons: [2, "×", 3, "=", "×", "="], expected: 36)
+    }
+    
+    func testAdditionByItself() {
+        pressButtons(buttons: [3, "+", "="], expected: 6)
+    }
+    
+    func pressButtons(buttons: [Any], expected: Any) {
+        for button in buttons {
+            XCUIApplication().buttons[String(describing: button)].tap()
+        }
         
-        XCTAssertEqual(resultLabelValue, "6")
+        let result = XCUIApplication().staticTexts.element(matching: .any, identifier: "Results").label
+        
+        XCTAssertEqual(result, String(describing: expected))
     }
 }
