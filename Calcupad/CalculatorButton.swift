@@ -11,8 +11,8 @@ import UIKit
 class CalculatorButton: UIButton {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        layer.borderWidth = 0.5
-        layer.borderColor = UIColor.black.cgColor
+        layer.cornerRadius = rect.height / 2
+        clipsToBounds = true
     }
     
     func toggleHighlighted(_ isHighlighted: Bool) {
