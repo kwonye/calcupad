@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var divideButton: CalculatorButton!
     @IBOutlet weak var multiplyButton: CalculatorButton!
     @IBOutlet weak var minusButton: CalculatorButton!
@@ -50,7 +50,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         operationButtons = [divideButton, multiplyButton, minusButton, plusButton];
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-        tableView.reloadData()
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
@@ -61,7 +60,7 @@ class ViewController: UIViewController {
         return results.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
         
         let result = results[results.count - 1 - (indexPath as NSIndexPath).row]
