@@ -105,12 +105,12 @@ class ViewController: UIViewController {
     @IBAction func onBackspaceTapped(_ sender: CalculatorButton) {
         let currentText = resultLabel.text!
         
-        if currentText.characters.count == 1 {
+        if currentText.count == 1 {
             if currentText != zero {
                 resultLabel.text = zero
             }
         } else {
-            resultLabel.text = String(currentText[..<currentText.characters.index(before: currentText.endIndex)])
+            resultLabel.text = String(currentText[..<currentText.index(before: currentText.endIndex)])
         }
         
         calculator.currentValue = Double(resultLabel!.text!)
