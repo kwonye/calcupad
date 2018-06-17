@@ -8,11 +8,16 @@
 
 import UIKit
 
-class CalculatorButton: UIButton {
+@IBDesignable class CalculatorButton: UIButton {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        layer.borderWidth = 0.5
-        layer.borderColor = UIColor.black.cgColor
+        setCornerAndBorderOfButton()
+        clipsToBounds = true
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setCornerAndBorderOfButton()
     }
     
     func toggleHighlighted(_ isHighlighted: Bool) {
@@ -21,6 +26,11 @@ class CalculatorButton: UIButton {
         } else {
             layer.borderWidth = 0.5
         }
+    }
+    
+    func setCornerAndBorderOfButton() {
+        layer.borderWidth = 5.0
+        layer.cornerRadius = bounds.size.height / 2
     }
     
     func isEqualButton() -> Bool {
