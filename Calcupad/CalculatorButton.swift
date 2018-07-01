@@ -22,9 +22,11 @@ import UIKit
     
     func toggleHighlighted(_ isHighlighted: Bool) {
         if isHighlighted {
-            layer.borderWidth = 3
+            setTitleColor(UIColor.orange, for: .normal)
+            backgroundColor = UIColor.white
         } else {
-            layer.borderWidth = 0.5
+            setTitleColor(UIColor.white, for: .normal)
+            backgroundColor = UIColor.orange
         }
     }
     
