@@ -56,4 +56,15 @@ class CalcupadUITests: XCTestCase {
         
         XCTAssertEqual(result, String(describing: expected))
     }
+    
+    func pressButtons(calculation: String, expectedResult: Any) {
+        for char in calculation {
+            if char != " " {
+                XCUIApplication().buttons[String(describing: char)].tap()
+            }
+        }
+        let result = XCUIApplication().staticTexts.element(matching: .any, identifier: "Results").label
+        
+        XCTAssertEqual(result, String(describing: expectedResult))
+    }
 }
