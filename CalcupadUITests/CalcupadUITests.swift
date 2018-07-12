@@ -43,6 +43,10 @@ class CalcupadUITests: XCTestCase {
         pressButtons(buttons: [2, "×", 3, "=", "×", "="], expected: 36)
     }
     
+    func testSolutionSubtractsItselfAfterSolution() {
+        pressButtons(buttons: [2, "×", 3, "=", "-", "="], expected: 0)
+    }
+    
     func testAdditionByItself() {
         pressButtons(buttons: [3, "+", "="], expected: 6)
     }
