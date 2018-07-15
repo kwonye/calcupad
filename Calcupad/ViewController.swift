@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let calculator: Calculator
     let calculationEntityName = "Calculation"
     let equationAttributeName = "equation"
+    let solutionAttributeName = "solution"
     let cellIdentifier = "Cell"
     let zero = "0"
     let period = "."
@@ -65,9 +66,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let result = results[results.count - 1 - (indexPath as NSIndexPath).row]
         
-        cell!.backgroundColor = UIColor.darkText
-        cell!.textLabel!.textColor = UIColor.white
-        cell!.textLabel!.text = result.value(forKey: equationAttributeName) as? String
+        let equationLabel = cell?.viewWithTag(0) as! UILabel
+        let solutionLabel = cell?.viewWithTag(1) as! UILabel
+        
+        equationLabel.text = result.value(forKey: equationAttributeName) as? String
+        solutionLabel.text = result.value(forKey: solutionAttributeName) as? String
         
         return cell!
     }
@@ -194,7 +197,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func saveToCoreData() {
-        let equation = "\(readableString(calculator.previousValue)) \(calculator.currentOperator!) \(readableString(calculator.currentValue)) = \(readableString(calculator.solution))"
+        let equation = "\(readableString(calculator.previousValue)) \(calculator.currentOperator!) \(readableString(calculator.currentValue))"
+        let solution = calculator.solution
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let entity = NSEntityDescription.entity(forEntityName: calculationEntityName, in: managedContext)
@@ -202,6 +206,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let result = NSManagedObject(entity: entity!, insertInto: managedContext)
         
         result.setValue(equation, forKey: equationAttributeName)
+        result.setValue(solution, forKey: solutionAttributeName)
         
         do {
             try managedContext.save()
